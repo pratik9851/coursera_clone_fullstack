@@ -1,0 +1,292 @@
+#navbar {
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+}
+
+div > #coursera-img {
+  height: 50px;
+  width: 130px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(51, 51, 51);
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.select {
+  margin-left: 20px;
+  height: 40px;
+  width: 90px;
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  margin-top: 5px;
+  font-weight: bold;
+  justify-content: center;
+  font-size: medium;
+  position: relative;
+}
+.select:hover {
+  background-color: white;
+  color: #0056d2;
+}
+
+.sub-explore{
+  display: none;
+  margin-top: 10px;
+
+}
+.select:hover .sub-explore{
+  display: block;
+  position: absolute;
+  background-color: gainsboro;
+  margin-top: 15px;
+  margin-left: 5px;
+
+}
+.select:hover .sub-explore ul{
+  display: block;
+  margin: 10px;
+  
+}
+.select:hover .sub-explore ul li{
+  width: 220px;
+  
+  text-align: left;
+  list-style: none;
+  
+
+  
+} 
+.select:hover .sub-explore ul:first-of-type li:first-child{
+  height: 50px;
+  margin-top: 10px;
+  
+}
+.select:hover .sub-explore ul li:nth-child(6){
+  height: 50px;
+  margin-top: 10px;
+  
+}
+#search_box {
+  height: 40px;
+  width: 330px;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+#magnify {
+  height: 20px;
+  width: 20px;
+  padding: 2px;
+}
+hr {
+  border-color: #e0e0e0;
+  border-top: thin;
+}
+#search_button {
+  height: 45px;
+  width: 45px;
+  background-color: #0056d2;
+  border: none;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+ul {
+  margin-top: 5px;
+  margin-left: 240px;
+}
+
+li {
+  display: inline;
+  margin-top: 0px;
+  float: right;
+}
+
+a {
+  display: block;
+  font-family: Source Sans Pro, Arial, sans-serif;
+  padding: 8px;
+  text-decoration: none;
+  margin: 5px;
+  font-size: small;
+  margin-top: 0px;
+  color: black;
+  padding: 10px;
+}
+li a:hover {
+  color: #0056d2;
+  text-decoration: underline;
+}
+li button {
+  background-color: #0056d2;
+  color: white;
+  height: 40px;
+  width: 120px;
+  border: none;
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 10px;
+  border-radius: 2px;
+}
+li button:hover {
+  background-color: darkblue;
+}
+#login {
+  color: #0056d2;
+}
+#filterBoxex {
+  width: 100%;
+  margin-top: 80px;
+  background-color: rgb(236, 234, 234);
+}
+#filterBoxex h2,
+#filterBoxex h {
+  margin-left: 12%;
+  padding: 25px 0px;
+}
+
+#boxes {
+  width: 80%;
+  height: 50px;
+  margin-left: 12%;
+  display: flex;
+  padding-bottom: 20px;
+}
+.box select {
+  width: 130px;
+  height: 40px;
+  padding: 10px;
+  margin-right: 30px;
+  /* padding-right: 30px; */
+}
+
+.courseDiv {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.courseDiv img {
+  width: 200px;
+  height: 150px;
+  margin-right: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  width: 75%;
+  margin-top: 50px;
+  margin-left: 12%;
+}
+#rating {
+  color: gold;
+  font-size: 18px;
+  font-weight: bold;
+}
+.cours {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: rgb(219, 219, 219);
+}
+#giveSpace2 {
+  padding-left: 30px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+#giveSpace1 {
+  padding-left: 15px;
+}
+.level {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+#footer {
+  /* width:100%; */
+  height: 500px;
+  background-color: rgb(204, 203, 203);
+}
+#footerBox {
+  /* width:100%; */
+  display: flex;
+  margin-bottom: 60px;
+  /* margin:auto; */
+}
+.footerData {
+  width: 18%;
+  margin-top: 50px;
+}
+.footerData p {
+  color: rgb(66, 65, 65);
+}
+.footerMargin {
+  margin-left: 18%;
+}
+#line {
+  width: 70%;
+  height: 2px;
+  margin: auto;
+  background-color: grey;
+}
+#footerInc {
+  display: flex;
+  margin: 50px 0px;
+}
+#footerInc p {
+  margin-left: 16%;
+  color: rgb(66, 65, 65);
+}
+#footerIncImage {
+  margin-left: 40%;
+  padding: 10px 0px;
+}
+.footerData p:hover {
+  text-decoration: underline;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background-color: rgb(214, 233, 248);
+}
+#ladyBox button:hover {
+  cursor: pointer;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background-color: blue;
+}
+#footerIncImage img:hover {
+  cursor: pointer;
+}
+#profile {
+  width: 80px;
+  height: 45px;
+  margin-left: 20px;
+  padding-top: -2px;
+}
+#profileLogo {
+  width: 90%;
+  height: 50px;
+  border-radius: 75%;
+  margin-top: -5px;
+}
+#profile:hover {
+  background-color: rgb(212, 211, 211);
+}
+.courseName:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

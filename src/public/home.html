@@ -1,0 +1,386 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursera | Online courses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon.ico">
+</head>
+
+<body>
+    <div class="bg-model">
+        <div class="model-content" style="margin-top: 0px;">
+            <div class="close">+</div>
+            <h1 id="signup">Sign Up</h1>
+            <p id="signupText">Learn on your own time from top<br /> universities and businesses.</p>
+            <form id="signUPForm">
+                <label for="">Full Name</label>
+                <input type="text" placeholder="Enter your full name" id="name">
+                <label for="">Email</label>
+                <input type="text" placeholder="name@email.com" id="email">
+                <label>Password</label>
+                <input type="password" placeholder="Create Password" id="password">
+                <p id="passChar">Between 8 and 72 characters</p>
+                <input type="button" id="joinButt" value="Join for Free" onclick="signUpData(event)">
+            </form>
+    
+            <hr /><span>or</span>
+            <hr>
+            <div class="directLogin">
+                <img src="data:image/png;base64,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"
+                    alt="">
+                <div>
+                    Continue with Google
+                </div>
+    
+            </div>
+            <div class="directLogin">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT291oBodFlIdBQbmFI3_C9vThX-W672olvuQ&usqp=CAU"
+                    alt="">
+                <div>
+                    Continue with FaceBook
+                </div>
+            </div>
+            <span id="allreadyCust">Already on Coursera?<a href="#">Log in</a></span>
+        </div>
+    </div>
+    
+    
+    <div class="bg-model_login">
+        <div class="model-content">
+            <div class="close2">+</div>
+            <h1 id="login">Wel-Come Back</h1>
+            <form id="login12">
+                <label for="">Email</label>
+                <input type="text" placeholder="name@email.com" id="email">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" id="password">
+                <p id="passChar"><a href="#">Forgot Password</a></p>
+                <input type="button" id="joinButt" value="Login" onclick="userLogin(event)">
+            </form>
+    
+            <hr /><span>or</span>
+            <hr>
+            <div class="directLogin">
+                <img src="data:image/png;base64,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"
+                    alt="">
+                <div>
+                    Continue with Google
+                </div>
+    
+            </div>
+            <div class="directLogin">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT291oBodFlIdBQbmFI3_C9vThX-W672olvuQ&usqp=CAU"
+                    alt="">
+                <div>
+                    Continue with FaceBook
+                </div>
+            </div>
+            <span id="allreadyCust">New to Coursera?<a href="#">Sign up</a></span>
+        </div>
+    </div>
+  
+
+    <!-- Navi-Bar Explore Button -->
+    <div id="navbar">
+        <img id="coursera-img"
+            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZpZXdCb3g9IjAgMCAxMTU1IDE2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiPjxwYXRoIGQ9Ik0xNTkuNzUgODEuNTRjMC00NC40OSAzNi42My04MC40NyA4Mi40My04MC40NyA0Ni4xMiAwIDgyLjc2IDM2IDgyLjc2IDgwLjQ3IDAgNDQuMTYtMzYuNjQgODAuOC04Mi43NiA4MC44LTQ1LjggMC04Mi40My0zNi42OC04Mi40My04MC44em0xMjUuNjEgMGMwLTIyLjI0LTE5LjMtNDEuODctNDMuMTgtNDEuODctMjMuNTUgMC00Mi44NSAxOS42My00Mi44NSA0MS44NyAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yIDIzLjkyIDAgNDMuMTgtMTkuNjMgNDMuMTgtNDIuMnptNzA1LjYzIDEuMzFjMC00OC43NCAzOS41OC04MS43OCA3NS41Ny04MS43OCAyNC41MyAwIDM4LjYgNy41MiA0OC4wOCAyMS45MmwzLjc3LTE5aDM2Ljc5djE1NS40aC0zNi43OWwtNC43NS0xNmMtMTAuNzkgMTEuNzgtMjQuMjEgMTktNDcuMSAxOS0zNS4zMy0uMDUtNzUuNTctMzEuMTMtNzUuNTctNzkuNTR6bTEyNS42MS0uMzNjLS4wOS0yMy41MjctMTkuNDctNDIuODM1LTQzLTQyLjgzNS0yMy41OSAwLTQzIDE5LjQxMS00MyA0M3YuMTY1YzAgMjEuNTkgMTkuMyA0MC44OSA0Mi44NiA0MC44OSAyMy44NSAwIDQzLjE0LTE5LjMgNDMuMTQtNDEuMjJ6TTk0NS43OCAyMlY0aC00MC4yM3YxNTUuMzloNDAuMjNWNzUuNjZjMC0yNS4xOSAxMi40NC0zOC4yNyAzNC0zOC4yNyAxLjQzIDAgMi43OS4xIDQuMTIuMjNMOTkxLjM2LjExYy0yMC45Ny4xMS0zNi4xNyA3LjMtNDUuNTggMjEuODl6bS00MDQuMjcuMDF2LTE4bC00MC4yMy4wOS4zNCAxNTUuMzcgNDAuMjMtLjA5LS4yMi04My43MmMtLjA2LTI1LjE4IDEyLjM1LTM4LjI5IDMzLjkzLTM4LjM0IDEuMzc2LjAwNCAyLjc1Mi4wODEgNC4xMi4yM0w1ODcuMSAwYy0yMSAuMTctMzYuMjIgNy4zOS00NS41OSAyMi4wMXpNMzM4Ljg4IDk5LjJWNC4wMWg0MC4yMlY5NC4zYzAgMTkuOTUgMTEuMTIgMzEuNzMgMzAuNDIgMzEuNzMgMjEuNTkgMCAzNC0xMy4wOSAzNC0zOC4yOFY0LjAxaDQwLjI0djE1NS4zOGgtNDAuMjF2LTE4Yy05LjQ4IDE0LjcyLTI0Ljg2IDIxLjkyLTQ2LjEyIDIxLjkyLTM1Ljk4LjAxLTU4LjU1LTI2LjE2LTU4LjU1LTY0LjExem0zOTEuNzQtMTcuNDhjLjA5LTQzLjUxIDMxLjIzLTgwLjc0IDgwLjYyLTgwLjY1IDQ1LjguMDkgNzguMTEgMzYuNzggNzggODAgLjAxIDQuMjczLS4zMyA4LjU0LTEgMTIuNzZsLTExOC40MS0uMjJjNC41NCAxOC42NSAxOS44OSAzMi4wOSA0My4xMiAzMi4xNCAxNC4wNiAwIDI5LjEyLTUuMTggMzguMy0xNi45NGwyNy40NCAyMmMtMTQuMTEgMTkuOTMtMzkgMzEuNjYtNjUuNDggMzEuNjEtNDYuNzUtLjE2LTgyLjY3LTM1LjIzLTgyLjU5LTgwLjd6bTExOC4xMi0xNi4xNGMtMi4yNi0xNS43LTE4LjU5LTI3Ljg0LTM3Ljg5LTI3Ljg3LTE4LjY1IDAtMzMuNzEgMTEuMDYtMzkuNjMgMjcuNzNsNzcuNTIuMTR6bS0yNjEuNCA1OS45NGwzNS43Ni0xOC43MmM1LjkxIDEyLjgxIDE3LjczIDIwLjM2IDM0LjQ4IDIwLjM2IDE1LjQzIDAgMjEuMzQtNC45MiAyMS4zNC0xMS44MiAwLTI1LTg0LjcxLTkuODUtODQuNzEtNjcgMC0zMS41MiAyNy41OC00OC4yNiA2MS43Mi00OC4yNiAyNS45NCAwIDQ4LjkyIDExLjQ5IDYxLjQgMzIuODNsLTM1LjQ0IDE4Ljc1Yy01LjI1LTEwLjUxLTE1LjEtMTYuNDItMjcuNTgtMTYuNDItMTIuMTQgMC0xOC4wNiA0LjI3LTE4LjA2IDExLjQ5IDAgMjQuMyA4NC43MSA4Ljg3IDg0LjcxIDY3IDAgMzAuMjEtMjQuNjIgNDguNTktNjQuMzUgNDguNTktMzMuODItLjAzLTU3LjQ2LTExLjE5LTY5LjI3LTM2Ljh6TTAgODEuNTRDMCAzNi43MyAzNi42My43NCA4Mi40My43NGMyNy45NDctLjE5NiA1NC4xODIgMTMuNzM3IDY5LjY3IDM3bC0zNC4zNCAxOS45MmE0Mi45NzIgNDIuOTcyIDAgMDAtMzUuMzMtMTguMzJjLTIzLjU1IDAtNDIuODUgMTkuNjMtNDIuODUgNDIuMiAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yYTQyLjUwMiA0Mi41MDIgMCAwMDM2LjMxLTIwbDM0IDIwLjI4Yy0xNS4zMDcgMjMuOTU1LTQxLjkwMiAzOC40MzEtNzAuMzMgMzguMjhDMzYuNjMgMTYyLjM0IDAgMTI1LjY2IDAgODEuNTR6IiBmaWxsPSIjMDA1NkQyIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4="
+            alt="">
+            <button  class="select">Explore
+                <div class="sub-explore" >
+                    
+                    <ul>
+                        <li><a href="#" style="font-weight: bolder;">Goals</a></li>
+                        <li><a href="#">Take a free course</a></li>
+                        <li><a href="#">Earn a Degree   </a></li>
+                        <li><a href="#">Earn a Certificate   </a></li>
+                        <li><a href="#">Launch your Career  </a></li>
+                   
+                        <li ><a href="#" style="font-weight: bolder;" >Subjects</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">Computer Science</a></li>
+                        <li><a href="#">Informatiom Technology</a></li>
+                        <li><a href="#">Language Training</a></li>
+                        <li><a href="#">Health</a></li>
+                        <li><a href="#">Personal Developement</a></li>
+                        <li><a href="#">Physical science and Engineering</a></li>
+                        <li><a href="#">Social Science</a></li>
+                        <li><a href="#">Arts and Humanities</a></li>
+                        <li><a href="#">Maths and logic</a></li>
+                        
+                    </ul>     
+                </div>
+            </button>
+        
+        <form id="myform">
+            <input type="text" id="search_box" placeholder="What do you wat to learn?">
+        </form>
+        <button id="search_button"><img id="magnify" src="https://img.icons8.com/material-outlined/2x/ffffff/search.png"
+                alt=""></button>
+
+
+        <ul>
+            <li><button id="signupButton">Join for Free</button></li>
+            <li><a id="login" href="home.html">Log In</a></li>
+            <li><a href="">For Student</a></li>
+            <li><a href="">For Enterprise</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div id="parent-div">
+        <div id="left-div">
+            <h1>Learn Without <br>Limits</h1>
+            <p>Take the next step in your career with a world class learning experience.</p>
+            <button id="left-btn">Join for Free</button>
+            <button id="right-btn">Try Coursera for Business</button>
+        </div>
+        <div id="right-div"><img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/33EmCuyKJT5MD5DOiYCcCV/993af7e2f4b789aed6193ff1978fe5d6/IN_HERO_C.png?auto=format%2Ccompress&dpr=1&w=459&h=497&q=40"
+                alt=""></div>
+    </div>
+    <div id="middle-div">
+        <span id="span1">We collaborate with <span> 200+ leading universities and companies</span></span>
+        <div id="img-div">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/60SA8pGxPXMmJf4n7umK1H/ccec31bbe2358210bf8391dcba6cd2f1/umich.png?auto=format%2Ccompress&dpr=1&w=&h=55"
+                alt="">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1c6RjBHi3Lqb9QpWxje7iA/b529f909c5230af3210ba2d47d149620/google.png?auto=format%2Ccompress&dpr=1&w=&h=37"
+                alt="">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1ZeiauXe5bPProvfuIo7o2/55d005d42979ab585cdfa01f825b7d4f/penn.svg?auto=format%2Ccompress&dpr=1&w=&h=37"
+                alt="">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/9V0ZHPEeFBPLlhvvCnS0x/0310b67e486733af9c9b1ba8be8d072b/ISB_transparent_logo.png?auto=format%2Ccompress&dpr=1&w=&h=37"
+                alt="">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/a2AuMXiugp5PM6uun7iCA/4fe0cdee6bd59fec786d3feb24bacfd8/1200px-Amazon_Web_Services_Logo.svg.png?auto=format%2Ccompress&dpr=1&w=&h=37"
+                alt="">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4adnkcJIgVKTinBB0j9GF8/446867ff27d8b40ea8b2c540eceae328/ibm.png?auto=format%2Ccompress&dpr=1&w=&h=32"
+                alt="">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7vM8QjnKMPx9iWPBLDAeSI/9acdbc853fc01ce38df8fa67896a09bf/Indian_Institute_of_Technology_Roorkee_logo.png?auto=format%2Ccompress&dpr=1&w=&h=37"
+                alt="">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4FSFmNXuDIzTvFb7n0v4mK/704ae9e0a7981fb6415f4cb4609bbbb3/stanford.svg?auto=format%2Ccompress&dpr=1&w=&h=27"
+                alt="">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/6intvCoriH8oDkbGSSlqm5/ceedf032a54cbc1fb7d2ab53a5b291a0/1200px-IIM_Calcutta_Logo.svg.png?auto=format%2Ccompress&dpr=1&w=&h=37"
+                alt="">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3bmmVE1BHvDQUFldOXgDQe/3c28a8509f567bf31a507917514c55ca/fblogo.png?auto=format%2Ccompress&dpr=1&w=&h=37"
+                alt="">
+        </div>
+    </div>
+    <div id="last-div">
+        <h1>Find your path to sucess</h1>
+        <div>
+            <div>
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-rebrand/achieve-your-goals/Icon-Learn.svg?auto=format%2Ccompress&dpr=1&w=&h=55"
+                    alt="">
+                <h4>Gain Expertise in latest skills</h4>
+                <p>with courses and Specializations in computer science, humanities, and more</p>
+            </div>
+            <div>
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-rebrand/achieve-your-goals/Icon-Get-Ready.svg?auto=format%2Ccompress&dpr=1&w=&h=55"
+                    alt="">
+                <h4>Learn job-ready career skills</h4>
+                <p>in artificial intelligence, machine learning, data science, cloud engineering, and more</p>
+            </div>
+            <div>
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-rebrand/achieve-your-goals/Icon-Earn-Degree.svg?auto=format%2Ccompress&dpr=1&w=&h=55"
+                    alt="">
+                <h4>Earn a degree</h4>
+                <p>from the world's leading universities in business, computer science, and more</p>
+            </div>
+            <div>
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-rebrand/achieve-your-goals/Icon-Upskill-your-org.svg?auto=format%2Ccompress&dpr=1&w=&h=55"
+                    alt="">
+                <h4>Upskill your organization</h4>
+                <p>with on-demand training and development programs</p>
+            </div>
+        </div>
+
+    </div>
+    <div id="boxtemplete4">
+        <div id="boxtemp41">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2QjC04BM3lOBkCBTcgcCiz/46dbd19b10b3a36350b1c39cc40b599d/ThreeImages-Marketing.png?auto=format%2Ccompress&dpr=1&w=606&h=553&q=40"
+                alt="">
+        </div>
+
+        <div id="boxtemp42">
+            <h2>World-class learning for you</h2>
+            <div>Pursue <strong class="box421">a promotion, a raise, or switch carrers</strong>
+                .<br>
+                <strong class="box421">89% of learners</strong>
+                who have taken a course
+                <strong class="box421">report <br> carrer benefits</strong>
+            </div>
+            <span>- Coursera Learner Outcome Survey, India (2021)</span>
+
+            <div id="buttontemp4">
+                <button id="btntemp41">Join for Free</button>
+                <button id="btntemp42">Try Coursera for Business</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="main_div">
+        <div class="bigdiv">
+            <h2 class="bigdiv_head" >World-class learning for anyone, anywhere</h2>
+       <div class="bigdiv_sub">
+       
+           <div class="bigdiv_sub1_1">
+               
+                   <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/79oOuCjA73r8MIX8Vj8KO2/b758aef174e8f68f6e265e6c3085befc/top-quality-image.png?auto=format%2Ccompress&dpr=1&w=624&h=463&q=40&fit=clip" style="min-width: 624px; min-height: 463px;width: 100%;" >
+               
+           </div>
+           <div class="bigdiv_sub_2">
+               <div class="top_quality">Top Quality</div>
+               <h3 class="earn">Earn credentials from leading companies and universities</h3>
+               <div class="start_learn">Start learning from instructors in subjects like business, computer science, data science, language learning & more.</div>
+           </div>
+       </div>
+    
+       <div class="bigdiv_sub1">
+           <div>
+               <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-rebrand/value-props/accessible-updated-certs.svg?auto=format%2Ccompress&dpr=1&w=518&h=501&q=40&fit=clip" style="max-width: 518px;max-height: 501px;width: 100%;">
+           </div>
+           <div class="bigdiv_sub_2" >
+               <div class="top_quality">Accessible</div>
+               <h3 class="earn">Progress towards your goals</h3>
+               <div class="start_learn">Choose from many options including courses and university degrees to accelerate your career.</div>
+           </div>
+       </div>
+       <div class="bigdiv_sub">
+           <div>
+               <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3NLmVGWuyYtyWCsNP9KBOg/37390bd15ee81641ae7b2a7d6c7ab71f/RHYME.png?auto=format%2Ccompress&dpr=1&w=655&h=481&q=40&fit=clip" style="max-width: 655px;max-height:481px;width: 100%;">
+           </div>
+           <div class="bigdiv_sub_2">
+               <div class="top_quality">Applied Learning</div>
+               <h3 class="earn">Gain expertise with practical skills</h3>
+               <div class="start_learn">Use Guided Projects to learn complex skills in 1-3 hours.</div>
+           </div>
+       </div>
+    
+       <div class="bigdiv_sub1">
+           <div>
+               
+                   <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5RajKP4FyCTMPB0RruSwvK/33699d7599c2a69b7df6cc7bce006cfd/certificate-crop.png?auto=format%2Ccompress&dpr=1&w=580&h=440&q=40&fit=clip" style="max-width: 580px;max-height: 440px;">
+               
+           </div>
+           <div class="bigdiv_sub_2">
+               <div class="top_quality">Shareable Certificates</div>
+               <h3 class="earn">Earn industry-recognized credentials</h3>
+               <div class="start_learn">Share your Professional Certificate from Google, IBM, Facebook & others with potential employers and your professional network.</div>
+           </div>
+       </div>
+
+    
+    
+    <div id="ladyBox">
+    
+        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-rebrand/secondary-consumer-cta/Image-Next-Step.png?auto=format%2Ccompress&dpr=1&w=471&h=330&q=40"
+            alt="Image/" class="" id="ladyimg">
+        <div id="textBox">
+            <div id="bigText">
+                <h2>
+                    <p>Take the next step<br />toward your personal<br />and professional goals<br />with Coursera.</p>
+                </h2>
+            </div>
+    
+    
+            <div id="smallText">
+                <p>Join now to recieve personalized recommendations<br /> form the full Coursera catlog.</p>
+            </div>
+    
+            <button id="joinButton">Join for Free</button>
+        </div>
+    </div>
+    
+    <section class="CourseraBussiness">
+        <div id="bussBox1">
+            <h2>Coursera for Business</h2>
+    
+            <p>Get world-class training and development programs developed by top universities and companies. All on
+                Coursera for
+                Business.</p>
+            <div id="butt2">
+                <button>Coursera for Enterprise</button>
+                <button>Coursera for Teams</button>
+            </div>
+        </div>
+        <div id="bussBox2">
+            <p><span id="num2000">2,000+ </span><span id="sptext">Coursera for Bussiness customers</span></p>
+            <div id="first3Img">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2SUxbvCqY1DfFP6aprn1DW/0ff43fdadfb3d8ef2ab606a33da9c060/logo-mindtree-color.png?auto=format%2Ccompress&dpr=1&w=120&h=40&q=40"
+                    class="companyImg more">
+                <img src="https://images.ctfassets.net/wp1lcwdav1p1/2gSh2ySvHF7nLxtb9dlQEt/764bae06b9276de25caa4ed11bf14000/tata.svg"
+                    class="companyImg">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3YzQz3Vh4YTiGqLELGNyu9/722d2f138687a1cef279e637f71e7ead/logo-reliance-industries-color.png?auto=format%2Ccompress&dpr=1&w=120&h=40&q=40"
+                    class="companyImg">
+            </div>
+            <div id="second3Img">
+                <img src="https://images.ctfassets.net/wp1lcwdav1p1/41QtOC7ZCIBCQa7hslWPne/265786c423394ff4b8ccc0717355593e/axisbank.svg"
+                    class="companyImg">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/6EliaRChToTNA8VBDbD0vj/0cd6751a3fde4dca165c40eadfdb1bc0/logo-generalelectric-color.png?auto=format%2Ccompress&dpr=1&w=120&h=40&q=40"
+                    class="companyImg more">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/R60gBTM79KUHbqnvpypJL/bfba4ab09adbf049303409b97d996176/logo-mahindra-color.png?auto=format%2Ccompress&dpr=1&w=120&h=40&q=40"
+                    class="companyImg">
+            </div>
+        </div>
+    </section>
+    
+    <section id="footer">
+        <div id="footerBox">
+            <div class="footerData footerMargin">
+                <h3>Start or advance your career</h3>
+    
+                <p>Google Data Analyst</p>
+                <p>Google Project Management</p>
+                <p>Google UX Design</p>
+                <p>Google IT Support</p>
+            </div>
+            <div class="footerData">
+                <h3>Browse popular topics</h3>
+    
+                <p>Free Courses</p>
+                <p>Learn a Language</p>
+                <p>Python</p>
+                <p>Java</p>
+            </div>
+            <div class="footerData">
+                <h3>Upskill your team</h3>
+    
+                <p>Skill for Data Science Teams</p>
+                <p>Data Driven Decision Making</p>
+                <p>Software Engineering Skills</p>
+                <p>Soft Skills for Engineering Teams</p>
+    
+            </div>
+            <div class="footerData">
+                <h3>Earn a degree or certificate<br /> online</h3>
+    
+                <p>MasterTrack Certificate</p>
+                <p>Professional</p>
+                <p>University Certificate</p>
+                <p>MBA & Business Degree</p>
+            </div>
+        </div>
+        <div id="line"></div>
+        <div id="footerInc">
+            <p>© 2021 Coursera Inc. All rights reserved.</p>
+            <div id="footerIncImage">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+                    alt="" class="footerIncImg">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/linkedin.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+                    alt="" class="footerIncImg">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/twitter.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+                    alt="" class="footerIncImg">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/youtube.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+                    alt="" class="footerIncImg">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+                    alt="" class="footerIncImg">
+            </div>
+        </div>
+    
+    </section>
+</body>
+
+</html>
+<script src="home.js"></script>

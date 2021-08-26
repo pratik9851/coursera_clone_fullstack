@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .paymentModel {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        /* display: none; */
+      }
+      #paymentBox {
+        width: 400px;
+        height: 600px;
+        background-color: white;
+        border-radius: 4px;
+        /* padding-left: 40px; */
+        position: relative;
+      }
+      button {
+        width: 200px;
+        height: 50px;
+      }
+      #topBox {
+        background-color: rgb(74, 74, 248);
+        width: 100%;
+        height: 170px;
+        display: flex;
+      }
+      #topBox img {
+        width: 100px;
+        height: 100px;
+        margin-left: 5%;
+        margin-top: 30px;
+        border: 10px solid white;
+      }
+      #textbox {
+        margin-top: 30px;
+        margin-left: 25px;
+      }
+      #textbox p {
+        color: white;
+        font-size: 25px;
+        font-family: OpenSans-light, Arial, sans-serif;
+        margin-bottom: 0;
+      }
+      #textbox span {
+        color: rgb(206, 205, 205);
+        font-size: 18px;
+      }
+      #price {
+        margin-top: 10px;
+      }
+      #secondbox {
+        width: 100%;
+        height: 28px;
+        background-color: rgb(61, 61, 207);
+        color: white;
+        padding-top: 5px;
+      }
+      #secondbox span {
+        margin-left: 5%;
+        font-family: OpenSans-light, Arial, sans-serif;
+      }
+      #CardNumber {
+        background-color: rgb(240, 245, 252);
+        border: 0.5px solid rgb(163, 162, 162);
+      }
+      #CardNumber {
+        width: 100%;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+      }
+      .inputNumber {
+        width: 100%;
+        height: 40px;
+        margin-top: 20px;
+      }
+      .inputNumber input {
+        border: none;
+        border-bottom: 1px solid rgb(172, 170, 170);
+        padding: 4px;
+      }
+      .cardNum {
+        width: 55%;
+        margin-left: 5%;
+      }
+      .expiry {
+        margin-left: 10%;
+        width: 20%;
+      }
+      #checkbox {
+        margin-left: 5%;
+        margin-top: 20px;
+      }
+      #checkbox span {
+        font-size: 18px;
+        color: rgb(85, 85, 85);
+      }
+      #bottomBox {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(74, 74, 248);
+        margin-top: 140px;
+        color: white;
+        font-size: 20px;
+      }
+      .close {
+        position: absolute;
+        top: 0;
+        right: 14px;
+        font-size: 42px;
+        color: rgb(199, 198, 198);
+        font-family: "Source Sans Pro", Arial, sans-serif;
+        transform: rotate(45deg);
+        cursor: pointer;
+      }
+      .lodingGif {
+        width: 25px;
+        height: 30px;
+        position: absolute;
+        left: 20px;
+        margin-left: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>Pay Now</button>
+    <div class="paymentModel">
+      <div id="paymentBox">
+        <div class="close">+</div>
+        <div id="topBox">
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/e8/7cc3d09d3f11e698dfff46d35f2da1/Stanford_Coursera_Logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120&q=40"
+          />
+          <div id="textbox">
+            <p>Machine Learning</p>
+            <span>Course Certificate</span>
+            <p id="price">&#x20B9; 4,315</p>
+          </div>
+        </div>
+        <div id="secondbox"><span>English </span></div>
+        <div id="CardNumber">
+          <span style="margin-left: 5%; color: rgb(68, 68, 68)"> Card</span
+          ><span style="margin-left: 60%; color: grey">+9988776655</span>
+        </div>
+        <div class="inputNumber">
+          <input type="number" placeholder="Card Expiry" class="cardNum" />
+          <input type="number" placeholder="Expiry" class="expiry" />
+        </div>
+        <div class="inputNumber">
+          <input type="text" placeholder="Card Holder's name" class="cardNum" />
+          <input type="number" placeholder="CVV" class="expiry" />
+        </div>
+        <div id="checkbox">
+          <input type="checkbox" id="checkboxx" />
+          <span>Remember Card</span>
+        </div>
+        <button id="bottomBox" onclick="payNow()">Pay &#x20B9; 4,315</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  function payNow() {
+    let paybtt = document.getElementById("bottomBox");
+    let img = document.createElement("img");
+    img.setAttribute("class", "lodingGif");
+    img.src = "https://i.gifer.com/ZZ5H.gif";
+
+    paybtt.append(img);
+    setTimeout(function () {
+      window.location.href = "sucess.html";
+    }, 5000);
+  }
+</script>

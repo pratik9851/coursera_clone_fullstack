@@ -1,0 +1,582 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="course-detail-styles.css">
+    <link rel="shortcut icon" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon.ico">
+</head>
+<body>
+    <div id="navbar">
+        <img id="coursera-img"
+            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZpZXdCb3g9IjAgMCAxMTU1IDE2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiPjxwYXRoIGQ9Ik0xNTkuNzUgODEuNTRjMC00NC40OSAzNi42My04MC40NyA4Mi40My04MC40NyA0Ni4xMiAwIDgyLjc2IDM2IDgyLjc2IDgwLjQ3IDAgNDQuMTYtMzYuNjQgODAuOC04Mi43NiA4MC44LTQ1LjggMC04Mi40My0zNi42OC04Mi40My04MC44em0xMjUuNjEgMGMwLTIyLjI0LTE5LjMtNDEuODctNDMuMTgtNDEuODctMjMuNTUgMC00Mi44NSAxOS42My00Mi44NSA0MS44NyAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yIDIzLjkyIDAgNDMuMTgtMTkuNjMgNDMuMTgtNDIuMnptNzA1LjYzIDEuMzFjMC00OC43NCAzOS41OC04MS43OCA3NS41Ny04MS43OCAyNC41MyAwIDM4LjYgNy41MiA0OC4wOCAyMS45MmwzLjc3LTE5aDM2Ljc5djE1NS40aC0zNi43OWwtNC43NS0xNmMtMTAuNzkgMTEuNzgtMjQuMjEgMTktNDcuMSAxOS0zNS4zMy0uMDUtNzUuNTctMzEuMTMtNzUuNTctNzkuNTR6bTEyNS42MS0uMzNjLS4wOS0yMy41MjctMTkuNDctNDIuODM1LTQzLTQyLjgzNS0yMy41OSAwLTQzIDE5LjQxMS00MyA0M3YuMTY1YzAgMjEuNTkgMTkuMyA0MC44OSA0Mi44NiA0MC44OSAyMy44NSAwIDQzLjE0LTE5LjMgNDMuMTQtNDEuMjJ6TTk0NS43OCAyMlY0aC00MC4yM3YxNTUuMzloNDAuMjNWNzUuNjZjMC0yNS4xOSAxMi40NC0zOC4yNyAzNC0zOC4yNyAxLjQzIDAgMi43OS4xIDQuMTIuMjNMOTkxLjM2LjExYy0yMC45Ny4xMS0zNi4xNyA3LjMtNDUuNTggMjEuODl6bS00MDQuMjcuMDF2LTE4bC00MC4yMy4wOS4zNCAxNTUuMzcgNDAuMjMtLjA5LS4yMi04My43MmMtLjA2LTI1LjE4IDEyLjM1LTM4LjI5IDMzLjkzLTM4LjM0IDEuMzc2LjAwNCAyLjc1Mi4wODEgNC4xMi4yM0w1ODcuMSAwYy0yMSAuMTctMzYuMjIgNy4zOS00NS41OSAyMi4wMXpNMzM4Ljg4IDk5LjJWNC4wMWg0MC4yMlY5NC4zYzAgMTkuOTUgMTEuMTIgMzEuNzMgMzAuNDIgMzEuNzMgMjEuNTkgMCAzNC0xMy4wOSAzNC0zOC4yOFY0LjAxaDQwLjI0djE1NS4zOGgtNDAuMjF2LTE4Yy05LjQ4IDE0LjcyLTI0Ljg2IDIxLjkyLTQ2LjEyIDIxLjkyLTM1Ljk4LjAxLTU4LjU1LTI2LjE2LTU4LjU1LTY0LjExem0zOTEuNzQtMTcuNDhjLjA5LTQzLjUxIDMxLjIzLTgwLjc0IDgwLjYyLTgwLjY1IDQ1LjguMDkgNzguMTEgMzYuNzggNzggODAgLjAxIDQuMjczLS4zMyA4LjU0LTEgMTIuNzZsLTExOC40MS0uMjJjNC41NCAxOC42NSAxOS44OSAzMi4wOSA0My4xMiAzMi4xNCAxNC4wNiAwIDI5LjEyLTUuMTggMzguMy0xNi45NGwyNy40NCAyMmMtMTQuMTEgMTkuOTMtMzkgMzEuNjYtNjUuNDggMzEuNjEtNDYuNzUtLjE2LTgyLjY3LTM1LjIzLTgyLjU5LTgwLjd6bTExOC4xMi0xNi4xNGMtMi4yNi0xNS43LTE4LjU5LTI3Ljg0LTM3Ljg5LTI3Ljg3LTE4LjY1IDAtMzMuNzEgMTEuMDYtMzkuNjMgMjcuNzNsNzcuNTIuMTR6bS0yNjEuNCA1OS45NGwzNS43Ni0xOC43MmM1LjkxIDEyLjgxIDE3LjczIDIwLjM2IDM0LjQ4IDIwLjM2IDE1LjQzIDAgMjEuMzQtNC45MiAyMS4zNC0xMS44MiAwLTI1LTg0LjcxLTkuODUtODQuNzEtNjcgMC0zMS41MiAyNy41OC00OC4yNiA2MS43Mi00OC4yNiAyNS45NCAwIDQ4LjkyIDExLjQ5IDYxLjQgMzIuODNsLTM1LjQ0IDE4Ljc1Yy01LjI1LTEwLjUxLTE1LjEtMTYuNDItMjcuNTgtMTYuNDItMTIuMTQgMC0xOC4wNiA0LjI3LTE4LjA2IDExLjQ5IDAgMjQuMyA4NC43MSA4Ljg3IDg0LjcxIDY3IDAgMzAuMjEtMjQuNjIgNDguNTktNjQuMzUgNDguNTktMzMuODItLjAzLTU3LjQ2LTExLjE5LTY5LjI3LTM2Ljh6TTAgODEuNTRDMCAzNi43MyAzNi42My43NCA4Mi40My43NGMyNy45NDctLjE5NiA1NC4xODIgMTMuNzM3IDY5LjY3IDM3bC0zNC4zNCAxOS45MmE0Mi45NzIgNDIuOTcyIDAgMDAtMzUuMzMtMTguMzJjLTIzLjU1IDAtNDIuODUgMTkuNjMtNDIuODUgNDIuMiAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yYTQyLjUwMiA0Mi41MDIgMCAwMDM2LjMxLTIwbDM0IDIwLjI4Yy0xNS4zMDcgMjMuOTU1LTQxLjkwMiAzOC40MzEtNzAuMzMgMzguMjhDMzYuNjMgMTYyLjM0IDAgMTI1LjY2IDAgODEuNTR6IiBmaWxsPSIjMDA1NkQyIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4="
+            alt="">
+    
+        <button class="select">Explore
+            <div class="sub-explore">
+        
+                <ul>
+                    <li><a href="#">Goals</a></li>
+                    <li><a href="#">Take a free course</a></li>
+                    <li><a href="#">Earn a Degree </a></li>
+                    <li><a href="#">Earn a Certificate </a></li>
+                    <li><a href="#">Launch your Career </a></li>
+        
+                    <li><a href="#">Subjects</a></li>
+                    <li><a href="#">Data Science</a></li>
+                    <li><a href="#">Computer Science</a></li>
+                    <li><a href="#">Informatiom Technology</a></li>
+                    <li><a href="#">Language Training</a></li>
+                    <li><a href="#">Health</a></li>
+                    <li><a href="#">Personal Developement</a></li>
+                    <li><a href="#">Physical science and Engineering</a></li>
+                    <li><a href="#">Social Science</a></li>
+                    <li><a href="#">Arts and Humanities</a></li>
+                    <li><a href="#">Maths and logic</a></li>
+        
+                </ul>
+        
+        
+        
+            </div>
+        
+        
+        </button>
+
+        </select>
+       <form id="myform">
+        <input
+          type="text"
+          id="search_box"
+          placeholder="What do you wat to learn?"
+        />
+      </form>
+      <button id="search_button">
+        <img
+          id="magnify"
+          src="https://img.icons8.com/material-outlined/2x/ffffff/search.png"
+          alt=""
+        />
+      </button>
+
+       <ul>
+        <li>
+          <div id="profile">
+            <img
+              id="profileLogo"
+              src="data:image/png;base64,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"
+              alt=""
+            />
+          </div>
+        </li>
+        <li><a href="">For Student</a></li>
+        <li><a href="">For Enterprise</a></li>
+      </ul>
+
+    </div>
+
+    <div class="machineLearning">
+      <div id="mbox">
+        <div class="close">+</div>
+        <div id="topBox1">Machine Learning</div>
+        <div id="lowerBox1">
+          <input type="radio" />
+          <span>Purchase Course &#x20B9; 4,335</span>
+          <div id="smallText">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/growth_catalog_subscription/ic_cert.png?auto=format%2Ccompress&dpr=1&w=35&h=35"
+              alt=""
+            />
+            <p>
+              Commit to earning a Certificate—it's a trusted, shareable<br />
+              way to showcase your new skills.
+            </p>
+          </div>
+
+          <input type="radio" />
+          <span>Full Course, No Certificate</span>
+          <div id="smallText">
+            <p id="withoutImg">
+              You will still have access to all course materials for this
+              course.
+            </p>
+          </div>
+        </div>
+        <div id="continueBox" onclick="goToPayment()"><div id="continueButt">Continue</div></div>
+      </div>
+    </div>
+
+    <hr>
+    <div id="top-div">
+        <div class="left-div">
+            <div class="a-div">
+                <a href="" >Browse </a> <span>></span> <a href="" >Data Science</a><span>></span> <a href="">Machine Learning</a> 
+            </div>
+            <h1 style="font-family: OpenSans-Bold, Arial, sans-serif;">Machine Learning</h1>
+            <div id="first-div">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>4.9</p>
+                <p>161,652 ratings</p>
+            </div>
+            <div id="second-div">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/2a/6192a04f1311e7ba12057425631cbc/AndrewNg-Headshot.jpg?auto=format%2Ccompress&dpr=1&w=36&h=" alt="">
+                <p>Andrew Ng</p>
+                <button>TOP INSTRUCTOR</button>
+            </div>
+            <div id="third-div">
+                <button id="popupSelectWindow">Enroll For Free <br> Starts Jul 21</button>
+                <a href="#">Financial aid available</a>
+            </div> 
+        </div>
+        
+    </div>
+    <div id="top-second-div">
+        <a href="#left-p-div">About</a>
+        <a href="#instructor-div">Instructors</a>
+        <a href="#syllabus-div">Syllabus</a>
+        <a href="#review-div">Reviews</a>
+        <a href="#enroll">Enrollment Options</a>
+        <a href="#faq">FAQ</a>
+    </div>
+    <hr>
+    <div id="parent-div">
+        <div id="left-p-div">
+            <h2>About this Course</h2>
+            <p>7,324,463 recent views</p>
+            <p>Machine learning is the science of getting computers to act without being explicitly programmed. In the past decade,
+            machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly
+            improved understanding of the human genome. Machine learning is so pervasive today that you probably use it dozens of
+            times a day without knowing it. Many researchers also think it is the best way to make progress towards human-level AI.
+            In this class, you will learn about the most effective machine learning techniques, and gain practice implementing them and getting them to work for yourself. More importantly, you'll learn about not only the
+            theoretical underpinnings of learning, but also gain the practical know-how needed to quickly and powerfully apply these
+            techniques to new problems. Finally, you'll learn about some of Silicon Valley's best practices in innovation as it
+            pertains to machine learning and AI.</p>
+            <div id="skills-div">
+                <h4>SKILLS YOU WILL GAIN</h4>
+                <div id="skills1-div">
+                <button>Logistic Regression</button>
+                <button>Artificial Neural Network</button>
+                <button>Machine Learning (ML) Algorithms</button>
+                </div>
+            </div>
+        </div>
+        <div id="right-p-div">
+            <div class="right-p1-div">
+                <div class="div-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoqE5w5oSzJ5hkVXlqk9GW5aC--Jc97eU5bA&usqp=CAU" alt="">
+                    <h5>Learner Career Outcomes</h5>
+                </div>
+                <div class="div-2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqoFc3XYyjHspD-N_Xiw3V9VYgpdBZNWiUFQ&usqp=CAU" alt="">
+                    <h3>32%</h3>
+                    <p>started a new career after completing </p>
+                </div>
+                <div class="div-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr9Aw2MHGDbQGBcHCzjv5bQCo7CENbFtD6vA&usqp=CAU" alt="">
+                    <h3>31%</h3>
+                    <p>got a tangible career benefit from this course</p>
+                </div>
+                <div class="div-4"> 
+                    <img src="data:image/png;base64,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" alt="">
+                    <h3>Flexible deadlines</h3>
+                </div>
+                <p>Reset deadlines in accordance to your schedule.</p>
+                <div class="div-5">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpS6pZl5fG51JdnpfLuEUL-cvsxOeu70zHzQ&usqp=CAU" alt="">
+                    <h3>Shareable Certificate</h3>
+                </div>
+                <p>Earn a Certificate upon completion</p>
+                <div class="div-6">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpS6pZl5fG51JdnpfLuEUL-cvsxOeu70zHzQ&usqp=CAU"
+                        alt="">
+                    <h3>100%online</h3>
+                </div>
+                <p>Start instantly and learn at your own schedule.</p>
+                <div class="div-7">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpS6pZl5fG51JdnpfLuEUL-cvsxOeu70zHzQ&usqp=CAU"
+                        alt="">
+                    <h3>Approx. 61 hours to complete</h3>
+                </div>
+                 
+                <div class="div-8">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpS6pZl5fG51JdnpfLuEUL-cvsxOeu70zHzQ&usqp=CAU"
+                        alt="">
+                    <h3>English</h3>
+                </div>
+                <p>Subtitles: Arabic, French, Portuguese (European), Chinese (Simplified), Italian, Vietnamese, German, Russian, English,
+                Hebrew, Spanish, Hindi, Japanese</p>
+            </div>
+        </div>
+    </div>
+    <div id="instructor-div">
+        <h3>Instructor</h3>
+        <div class="ins-div1"> 
+        </div>
+        <div class="ins-div2">
+            <div class="img-div">
+                <h5>Instructor Rating</h5>
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/2a/6192a04f1311e7ba12057425631cbc/AndrewNg-Headshot.jpg?auto=format%2Ccompress&dpr=1&w=112&h=112&q=40&fit=crop" alt="">
+            </div>
+            <div id="details-div">
+                <p>4.93/5 (26,070 Ratings)</p>
+                <h4>Andrew Ng</h4>
+                <p>Instructor</p>
+                <p>Founder,DeepLearning. AI & Co-founder,Coursera</p>
+                <p>5,216,708 Learners</p>
+                <p>31 courses</p>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="course-div">
+        <div>
+        <h2>Offered By</h2>
+        </div>
+        <div id="uni-div">
+            <div>
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/e8/7cc3d09d3f11e698dfff46d35f2da1/Stanford_Coursera_Logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120&q=40" alt="">
+            </div>
+            <div id="uni-details">
+                <h2>Stanford University</h2>
+                <p>The Leland Stanford Junior University, commonly referred to as Stanford University or Stanford, is an American private
+                research university located in Stanford, California on an 8,180-acre (3,310 ha) campus near Palo Alto, California,
+                United States.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="syllabus-div">
+        <h2>Syllabus - What you will learn from this course</h2>
+        <p>Content Rating 97% (1,388,359 ratings)</p>
+    </div>
+    <div id="weekly-div">
+        <div id="week-left-div">
+            <h2>WEEK</h2>
+            <h1>1</h1>
+        </div>
+        <div id="week-right-div">
+            <div id="time-div">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                    alt="">
+                <h5>2 hours to complete</h5>
+            </div>
+            <div>
+                <h3>Introduction</h3>
+                <p>Welcome to Machine Learning! In this module, we introduce the core idea of teaching a computer to
+                    learn concepts using
+                    data—without being explicitly programmed. The Course Wiki is under construction. Please visit the
+                    resources tab for the
+                    most complete and up-to-date information.</p>
+            </div>
+            <div id="vid-div">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                    alt="">
+                <p>5 videos (Total 42 min), 9 readings, 1 quiz</p>
+            </div>
+            <hr>
+            <div id="week-right-div">
+                <div id="time-div">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                        alt="">
+                    <h5>2 hours to complete</h5>
+                </div>
+                <div>
+                    <h3>Linear Regression with One Variable</h3>
+                    <p>Linear regression predicts a real-valued output based on an input value. We discuss the application of linear regression
+                    to housing price prediction, present the notion of a cost function, and introduce the gradient descent method for
+                    learning.</p>
+                </div>
+                <div id="vid-div">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                        alt="">
+                    <p>7 videos (Total 70 min), 8 readings, 1 quiz</p>
+                </div>
+                <hr>
+                <div id="week-right-div">
+                    <div id="time-div">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                            alt="">
+                        <h5>2 hours to complete</h5>
+                    </div>
+                    <div>
+                        <h3>Linear Algebra Review</h3>
+                        <p>This optional module provides a refresher on linear algebra concepts. Basic understanding of linear algebra is necessary
+                        for the rest of the course, especially as we begin to cover models with multiple variables.</p>
+                    </div>
+                    <div id="vid-div">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                            alt="">
+                        <p>6 videos (Total 61 min), 7 readings, 1 quiz</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="weekly-div">
+        <div id="week-left-div">
+            <h2>WEEK</h2>
+            <h1>2</h1>
+        </div>
+        <div id="week-right-div">
+            <div id="time-div">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                    alt="">
+                <h5>3 hours to complete</h5>
+            </div>
+            <div>
+                <h3>Linear Regression with Multiple Variables</h3>
+                <p>What if your input has more than one value? In this module, we show how linear regression can be extended to accommodate
+                multiple input features. We also discuss best practices for implementing linear regression.</p>
+            </div>
+            <div id="vid-div">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                    alt="">
+                <p>8 videos (Total 65 min), 16 readings, 1 quiz</p>
+            </div>
+            <hr>
+            <div id="week-right-div">
+                <div id="time-div">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                        alt="">
+                    <h5>5 hours to complete</h5>
+                </div>
+                <div>
+                    <h3>Octave/Matlab Tutorial</h3>
+                    <p>This course includes programming assignments designed to help you understand how to implement the learning algorithms in
+                    practice. To complete the programming assignments, you will need to use Octave or MATLAB. This module introduces
+                    Octave/Matlab and shows you how to submit an assignment.</p>
+                </div>
+                <div id="vid-div">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                        alt="">
+                    <p>6 videos (Total 80 min), 2 readings, 2 quizzes</p>
+                </div>
+                <hr>
+                <div id="week-right-div">
+                    <div id="time-div">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                            alt="">
+                        <h5>2 hours to complete</h5>
+                    </div>
+                    <div>
+                        <h3>Introduction</h3>
+                        <p>Welcome to Machine Learning! In this module, we introduce the core idea of teaching a
+                            computer to learn
+                            concepts using
+                            data—without being explicitly programmed. The Course Wiki is under construction. Please
+                            visit the resources
+                            tab for the
+                            most complete and up-to-date information.</p>
+                    </div>
+                    <div id="vid-div">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                            alt="">
+                        <p>5 videos (Total 42 min), 9 readings, 1 quiz</p>
+                    </div>
+                 
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="weekly-div">
+        <div id="week-left-div">
+            <h2>WEEK</h2>
+            <h1>3</h1>
+        </div>
+        <div id="week-right-div">
+            <div id="time-div">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                    alt="">
+                <h5>2 hours to complete</h5>
+            </div>
+            <div>
+                <h3>Logistic Regression</h3>
+                <p>Logistic regression is a method for classifying data into discrete outcomes. For example, we might use logistic
+                regression to classify an email as spam or not spam. In this module, we introduce the notion of classification, the cost
+                function for logistic regression, and the application of logistic regression to multi-class classification.</p>
+
+            </div>
+            <div id="vid-div">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                    alt="">
+                <p>7 videos (Total 71 min), 8 readings, 1 quiz</p>
+            </div>
+            <hr>
+            <div id="week-right-div">
+                <div id="time-div">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                        alt="">
+                    <h5>5 hours to complete</h5>
+                </div>
+                <div>
+                    <h3>Regularization</h3>
+                    <p>Machine learning models need to generalize well to new examples that the model has not seen in practice. In this module,
+                    we introduce regularization, which helps prevent models from overfitting the training data.</p>
+                </div>
+                <div id="vid-div">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                        alt="">
+                    <p>4 videos (Total 39 min), 5 readings, 2 quizzes</p>
+                </div>
+                <hr>
+                <div id="week-right-div">
+                    <div id="time-div">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                            alt="">
+                        <h5>5 hours to complete</h5>
+                    </div>
+                    <div>
+                        <h3>Neural Networks: Representation</h3>
+                        <p>Neural networks is a model inspired by how the brain works. It is widely used today in many applications: when your
+                        phone interprets and understand your voice commands, it is likely that a neural network is helping to understand your
+                        speech; when you cash a check, the machines that automatically read the digits also use neural networks.</p>
+                    </div>
+                    <div id="vid-div">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSkW-oTKgevOHsqs5gDnG_g60mQdWxrDrng&usqp=CAU"
+                            alt="">
+                        <p>7 videos (Total 63 min), 6 readings, 2 quizzes</p>
+                    </div>
+    
+                    <hr>
+                    <button id="show-more">Show More</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="review-div">
+        <div id="review-left-div">
+            <h2>Reviews</h2>
+            <div id="review-left1-div">
+                <h1>4.9</h1>
+                <p>⭐⭐⭐⭐⭐</p>
+
+            </div>
+        </div>
+        <div id="review-right-div">
+            <h4>TOP REVIEWS FROM MACHINE LEARNING</h4>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>by RCJul 18, 2019</p>
+            <p>Amazing course. It gets deep into the content and now I feel I know at least the basics of Machine Learning. This is
+            definitely going to help me on my job! Thanks Andrew and the mentors of the course!</p>
+        </div>
+        
+
+    </div>
+    <div id="enroll">
+        <div class="enroll-div1">
+            <h2>Start Learning Today</h2>
+            <h5> <a href="">Financial aid available</a> </h5>
+            <button>Enroll for free <br>Starts 22 Jul</button>
+            <p><span>4,272,359</span> already enrolled</p>
+        </div>
+        <div class="enroll-div2">
+            <h4>Shareable on  <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/growth/xdp/linkedin-logo.svg?auto=format%2Ccompress&dpr=1&w=128&h=30&q=40" alt=""></h4>
+            <p>You can share your Course Certificates in the Certifications section of your LinkedIn profile, on printed resumes, CVs,
+            or other documents.</p>
+        </div>
+        <div class="enroll-div3">
+            <img src="https://www.learnerzhub.com/wp-content/uploads/2019/01/Coursera-certificate-1.png" alt="">
+        </div>
+    </div>
+
+    <div id="faq">
+        <h1>Frequently Asked Question</h1>
+        <div id="faq-div1">
+            <h4>When will I have access to the lectures and assignments?</h4>
+            <p>Access to lectures and assignments depends on your type of enrollment. If you take a course in audit mode, you will be
+            able to see most course materials for free. To access graded assignments and to earn a Certificate, you will need to
+            purchase the Certificate experience, during or after your audit. If you don't see the audit option:
+            
+            The course may not offer an audit option. You can try a Free Trial instead, or apply for Financial Aid.
+            The course may offer 'Full Course, No Certificate' instead. This option lets you see all course materials, submit
+            required assessments, and get a final grade. This also means that you will not be able to purchase a Certificate
+            experience.</p>
+        </div>
+        <div id="faq-div2">
+            <h4>What will I get if I purchase the Certificate?</h4>
+            <p>When you purchase a Certificate you get access to all course materials, including graded assignments. Upon completing
+            the course, your electronic Certificate will be added to your Accomplishments page - from there, you can print your
+            Certificate or add it to your LinkedIn profile. If you only want to read and view the course content, you can audit the
+            course for free.</p>
+        </div>
+    </div>
+    <hr>
+    <section id="footer">
+        <div id="footerBox">
+            <div class="footerData footerMargin">
+                <h3>Start or advance your career</h3>
+    
+                <p>Google Data Analyst</p>
+                <p>Google Project Management</p>
+                <p>Google UX Design</p>
+                <p>Google IT Support</p>
+            </div>
+            <div class="footerData">
+                <h3>Browse popular topics</h3>
+    
+                <p>Free Courses</p>
+                <p>Learn a Language</p>
+                <p>Python</p>
+                <p>Java</p>
+            </div>
+            <div class="footerData">
+                <h3>Upskill your team</h3>
+    
+                <p>Skill for Data Science Teams</p>
+                <p>Data Driven Decision Making</p>
+                <p>Software Engineering Skills</p>
+                <p>Soft Skills for Engineering Teams</p>
+    
+            </div>
+            <div class="footerData">
+                <h3>Earn a degree or certificate<br /> online</h3>
+    
+                <p>MasterTrack Certificate</p>
+                <p>Professional</p>
+                <p>University Certificate</p>
+                <p>MBA & Business Degree</p>
+            </div>
+        </div>
+        <div id="line"></div>
+        <div id="footerInc">
+            <p>© 2021 Coursera Inc. All rights reserved.</p>
+            <div id="footerIncImage">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+                    alt="" class="footerIncImg">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/linkedin.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+                    alt="" class="footerIncImg">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/twitter.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+                    alt="" class="footerIncImg">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/youtube.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+                    alt="" class="footerIncImg">
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+                    alt="" class="footerIncImg">
+            </div>
+        </div>
+    
+    </section>
+</body>
+</html>
+
+<script>
+
+   document.getElementById("popupSelectWindow").addEventListener("click",function(){
+        document.body.style.background = "rgba(0, 0, 0, 0.7)";
+        document.querySelector(".machineLearning").style.display = "flex";
+    });
+
+    document.querySelector(".close").addEventListener("click",function(){
+        document.querySelector(".machineLearning").style.display = "none";
+         document.body.style.background = "none";
+    });
+
+    function goToPayment(){
+        window.location.href = "cart.html";
+    }
+
+</script>

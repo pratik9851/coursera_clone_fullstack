@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .machineLearning {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        /* display: none; */
+      }
+      #mbox {
+        width: 600px;
+        height: 450px;
+        background-color: white;
+        border-radius: 4px;
+        /* padding-left: 40px; */
+        position: relative;
+      }
+      #topBox1 {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(34, 49, 90);
+        color: white;
+        font-size: 30px;
+        font-family: OpenSans-light, Arial, sans-serif;
+      }
+      #lowerBox1 {
+        width: 100%;
+        height: 250px;
+      }
+      #lowerBox1 input,
+      #lowerBox1 div {
+        margin-left: 8%;
+        margin-top: 40px;
+      }
+      #lowerBox1 span {
+        font-size: 22px;
+        font-family: OpenSans-light, Arial, sans-serif;
+        color: rgb(65, 65, 65);
+      }
+      #lowerBox1 span:hover {
+        cursor: pointer;
+      }
+      #smallText {
+        width: 100%;
+        display: flex;
+      }
+      #smallText img {
+        width: 3%;
+        height: 35px;
+        margin-top: -4.5%;
+        margin-left: 20px;
+        margin-right: 10px;
+      }
+      #smallText p {
+        font-size: 18px;
+        font-family: OpenSans-light, Arial, sans-serif;
+        margin-top: -5%;
+      }
+      #withoutImg {
+        margin-left: 20px;
+      }
+      #continueBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #continueButt {
+        width: 30%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-family: OpenSans-light, Arial, sans-serif;
+        background-color: rgb(61, 138, 226);
+        color: white;
+        border-radius: 2px;
+      }
+      #continueButt:hover {
+        background-color: rgb(4, 71, 160);
+        cursor: pointer;
+      }
+      .close {
+        position: absolute;
+        top: 0;
+        right: 14px;
+        font-size: 42px;
+        font-family: "Source Sans Pro", Arial, sans-serif;
+        color: grey;
+        transform: rotate(45deg);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="machineLearning">
+      <div id="mbox">
+        <div class="close">+</div>
+        <div id="topBox1">Machine Learning</div>
+        <div id="lowerBox1">
+          <input type="radio" />
+          <span>Purchase Course &#x20B9; 4,335</span>
+          <div id="smallText">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/growth_catalog_subscription/ic_cert.png?auto=format%2Ccompress&dpr=1&w=35&h=35"
+              alt=""
+            />
+            <p>
+              Commit to earning a Certificate—it's a trusted, shareable<br />
+              way to showcase your new skills.
+            </p>
+          </div>
+
+          <input type="radio" />
+          <span>Full Course, No Certificate</span>
+          <div id="smallText">
+            <p id="withoutImg">
+              You will still have access to all course materials for this
+              course.
+            </p>
+          </div>
+        </div>
+        <div id="continueBox"><div id="continueButt">Continue</div></div>
+      </div>
+    </div>
+  </body>
+</html>

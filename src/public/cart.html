@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cart</title>
+    <link
+      rel="shortcut icon"
+      href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon.ico"
+    />
+    <style>
+      .up-main-container {
+        display: flex;
+        float: none;
+        margin: 36px auto;
+        width: 100%;
+        min-width: 320px;
+
+        display: box;
+        display: flex;
+
+        justify-content: center;
+      }
+      .emi {
+        background-color: #2a73cc;
+        border: 1px solid #fff;
+        border-radius: 1px;
+        color: #fff;
+        display: inline-block;
+        font-family: OpenSans, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 10px;
+        padding: 2px 6px;
+        text-transform: uppercase;
+      }
+      .up-main-container {
+        display: flex;
+      }
+      .up-main-container-sub div {
+        display: flex;
+      }
+      .up-main-container div img {
+        height: 24px;
+        width: 39px;
+      }
+      #btn {
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 20px;
+        color: white;
+      }
+      #term {
+        margin: 0;
+        width: 247px;
+        line-height: 16px;
+        margin-left: 15px;
+      }
+      .enrolled {
+        background-color: #bdfdde;
+        border-radius: 15px;
+        height: 21px;
+        font-size: 13px;
+        margin-left: 190px;
+        padding: 3px 18px;
+      }
+      #confirm {
+        font-family: OpenSans, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        margin: 0;
+      }
+      .cartbody {
+        background-color: #fff;
+        box-shadow: 1px 1px 4px #bdbdbd;
+        padding: 22px 20px 28px;
+        max-width: 300px;
+      }
+      #caption {
+        font-size: 12px;
+        line-height: 18px;
+        font-family: OpenSans, Arial, sans-serif;
+      }
+      .quote {
+        background-color: #fff;
+        box-shadow: 1px 1px 4px #bdbdbd;
+        padding: 22px 20px 28px;
+        max-width: 300px;
+        margin-top: 30px;
+        max-height: 240px;
+      }
+      .cap1 {
+        font-family: OpenSans, Arial, sans-serif;
+        color: rgb(156, 151, 151);
+      }
+      .cap2 {
+        font-size: 12px;
+        line-height: 18px;
+        font-family: OpenSans, Arial, sans-serif;
+        color: rgb(156, 151, 151);
+      }
+
+      .paymentModel {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        display: none; */
+      }
+      #paymentBox {
+        width: 400px;
+        height: 600px;
+        background-color: white;
+        border-radius: 4px;
+        /* padding-left: 40px; */
+        position: relative;
+      }
+      button {
+        width: 200px;
+        height: 50px;
+      }
+      #topBox {
+        background-color: rgb(74, 74, 248);
+        width: 100%;
+        height: 170px;
+        display: flex;
+      }
+      #topBox img {
+        width: 100px;
+        height: 100px;
+        margin-left: 5%;
+        margin-top: 30px;
+        border: 10px solid white;
+      }
+      #textbox {
+        margin-top: 30px;
+        margin-left: 25px;
+      }
+      #textbox p {
+        color: white;
+        font-size: 25px;
+        font-family: OpenSans-light, Arial, sans-serif;
+        margin-bottom: 0;
+      }
+      #textbox span {
+        color: rgb(206, 205, 205);
+        font-size: 18px;
+      }
+      #price {
+        margin-top: 10px;
+      }
+      #secondbox {
+        width: 100%;
+        height: 28px;
+        background-color: rgb(61, 61, 207);
+        color: white;
+        padding-top: 5px;
+      }
+      #secondbox span {
+        margin-left: 5%;
+        font-family: OpenSans-light, Arial, sans-serif;
+      }
+      #CardNumber {
+        background-color: rgb(240, 245, 252);
+        border: 0.5px solid rgb(163, 162, 162);
+      }
+      #CardNumber {
+        width: 100%;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+      }
+      .inputNumber {
+        width: 100%;
+        height: 40px;
+        margin-top: 20px;
+      }
+      .inputNumber input {
+        border: none;
+        border-bottom: 1px solid rgb(172, 170, 170);
+        padding: 4px;
+      }
+      .cardNum {
+        width: 55%;
+        margin-left: 5%;
+      }
+      .expiry {
+        margin-left: 10%;
+        width: 20%;
+      }
+      #checkbox {
+        margin-left: 5%;
+        margin-top: 20px;
+      }
+      #checkbox span {
+        font-size: 18px;
+        color: rgb(85, 85, 85);
+      }
+      #bottomBox {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(74, 74, 248);
+        margin-top: 140px;
+        color: white;
+        font-size: 20px;
+      }
+      .close {
+        position: absolute;
+        top: 0;
+        right: 14px;
+        font-size: 42px;
+        color: rgb(199, 198, 198);
+        font-family: "Source Sans Pro", Arial, sans-serif;
+        transform: rotate(45deg);
+        cursor: pointer;
+      }
+      .lodingGif {
+        width: 25px;
+        height: 30px;
+        position: absolute;
+        left: 20px;
+        margin-left: 50px;
+      }
+      #paymentbtt{
+         background-color: #2a73cc;
+      }
+      #paymentbtt:hover{
+         background-color: rgb(51, 51, 240);
+          cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="paymentModel">
+      <div id="paymentBox">
+        <div class="close">+</div>
+        <div id="topBox">
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/e8/7cc3d09d3f11e698dfff46d35f2da1/Stanford_Coursera_Logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120&q=40"
+          />
+          <div id="textbox">
+            <p>Machine Learning</p>
+            <span>Course Certificate</span>
+            <p id="price">&#x20B9; 4,315</p>
+          </div>
+        </div>
+        <div id="secondbox"><span>English </span></div>
+        <div id="CardNumber">
+          <span style="margin-left: 5%; color: rgb(68, 68, 68)"> Card</span
+          ><span style="margin-left: 60%; color: grey">+9988776655</span>
+        </div>
+        <div class="inputNumber">
+          <input type="number" placeholder="Card Expiry" class="cardNum" />
+          <input type="number" placeholder="Expiry" class="expiry" />
+        </div>
+        <div class="inputNumber">
+          <input type="text" placeholder="Card Holder's name" class="cardNum" />
+          <input type="number" placeholder="CVV" class="expiry" />
+        </div>
+        <div id="checkbox">
+          <input type="checkbox" id="checkboxx" />
+          <span>Remember Card</span>
+        </div>
+        <button id="bottomBox" onclick="payNow()">Pay &#x20B9; 4,315</button>
+      </div>
+    </div>
+
+    <div class="up-main-container">
+      <div class="up-main-container-sub">
+        <div
+          style="
+            display: flex;
+            justify-content: space-evenly;
+            padding-bottom: 5px;
+          "
+        >
+          <h2 id="confim">Confirm</h2>
+          <div class="enrolled">371965 already enrolled!</div>
+        </div>
+        <div style="margin-top: 40px; padding-bottom: 5px">
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/web/images/signature/cc/visa-2.png"
+            alt=""
+          />
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/web/images/signature/cc/mastercard-2.png"
+            alt=""
+          />
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/web/images/signature/cc/amex-2.png"
+            alt=""
+          />
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/web/images/signature/cc/upi.png"
+            alt=""
+          />
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/web/images/signature/cc/netbanking.png"
+            alt=""
+          />
+          <span class="emi">EMi</span>
+        </div>
+        <div
+          style="
+            padding-top: 70px;
+            display: block;
+            padding-left: 50px;
+            border-top: 1px solid rgb(139, 139, 139);
+          "
+        >
+          <div id="term">
+            <span>
+              By continuing to payment, I agree to the Terms of Use, Refund
+              Policy, and Privacy Policy.
+            </span>
+          </div>
+          <div style="margin: 24px 0">
+            <button style="width: 292px" id="paymentbtt">
+              Continue payment
+            </button>
+          </div>
+        </div>
+      </div>
+      <div style="margin-left: 20px">
+        <div class="cartbody">
+          <div style="display: flex">
+            <div style="height: 90px; width: 90px">
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/e8/7cc3d09d3f11e698dfff46d35f2da1/Stanford_Coursera_Logo.png?auto=format%2Ccompress&dpr=1&w=70&h=70&fit=fill&bg=FFF"
+                alt=""
+              />
+            </div>
+            <div>
+              <div style="font-size: 14px; line-height: 24px">
+                Machine Learing
+              </div>
+              <div id="caption">By Stanford University</div>
+              <a href="#">Remove from cart</a>
+            </div>
+          </div>
+          <div
+            style="
+              margin-top: 20px;
+              border-top: 1px solid rgb(139, 139, 139);
+              padding-top: 10px;
+            "
+          >
+            <div style="display: flex">
+              <div>Course Certificate</div>
+              <div style="margin-left: 150px">₹4,315</div>
+            </div>
+            <div style="display: flex; margin-top: 10px">
+              <div style="font-weight: bold">Total:</div>
+              <div style="margin-left: 225px">₹4,315</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote">
+          <div style="display: flex">
+            <div>
+              <img
+                style="width: 100px; height: 200px"
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/growth_checkout_test/testimonials/leah_b_1.JPG?auto=format%2Ccompress&dpr=2&w=144&h=192&q=40&fit=clip"
+                alt=""
+              />
+            </div>
+            <div>
+              <div
+                style="
+                  font-size: 16px;
+                  width: 35%;
+                  margin-left: 35px;
+                  font-family: sans-serif;
+                "
+              >
+                I attribute a lot to Coursera – it’s given me not only career
+                skills, but passion and meaning in my life.
+              </div>
+              <div style="margin-top: 50px; text-align: right">— Leah B.</div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; margin-top: 100px; margin-left: 10px">
+          <div style="display: flex">
+            <div>
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/growth_checkout_test/globe.png?auto=format%2Ccompress&dpr=2&w=36&h=36"
+                alt=""
+              />
+            </div>
+            <div>
+              <div class="cap1">60 Million+</div>
+              <div class="cap2">Learners</div>
+            </div>
+          </div>
+          <div style="display: flex; margin-left: 40px">
+            <div style="display: flex">
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/growth_checkout_test/curriculum.png?auto=format%2Ccompress&dpr=2&w=36&h=36"
+                  alt=""
+                />
+              </div>
+
+              <div>
+                <div class="cap1">3900+</div>
+                <div class="cap2">courses</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.getElementById("paymentbtt").addEventListener("click", function () {
+    document.body.style.background = "rgba(0, 0, 0, 0.7)";
+    document.querySelector(".paymentModel").style.display = "flex";
+  });
+
+  document.querySelector(".close").addEventListener("click", function () {
+    document.querySelector(".paymentModel").style.display = "none";
+    document.body.style.background = "none";
+  });
+
+  function payNow() {
+    let paybtt = document.getElementById("bottomBox");
+    let img = document.createElement("img");
+    img.setAttribute("class", "lodingGif");
+    img.src = "https://i.gifer.com/ZZ5H.gif";
+
+    paybtt.append(img);
+    setTimeout(function () {
+      window.location.href = "sucess.html";
+    }, 5000);
+  }
+</script>

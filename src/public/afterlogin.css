@@ -1,0 +1,460 @@
+body {
+  margin: 0px;
+  background-color: white;
+}
+#navbar {
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+}
+
+div > #coursera-img {
+  height: 50px;
+  width: 130px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(51, 51, 51);
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.select {
+  margin-left: 20px;
+  height: 40px;
+  width: 90px;
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  margin-top: 5px;
+  font-weight: bold;
+  justify-content: center;
+  font-size: medium;
+  position: relative;
+}
+.select:hover {
+  background-color: white;
+  color: #0056d2;
+}
+
+.sub-explore {
+  display: none;
+  margin-top: 10px;
+}
+.select:hover .sub-explore {
+  display: block;
+  position: absolute;
+  background-color: gainsboro;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+.select:hover .sub-explore ul {
+  display: block;
+  margin: 10px;
+}
+.select:hover .sub-explore ul li {
+  width: 220px;
+
+  text-align: left;
+  list-style: none;
+}
+.select:hover .sub-explore ul:first-of-type li:first-child {
+  height: 50px;
+  margin-top: 10px;
+}
+.select:hover .sub-explore ul li:nth-child(6) {
+  height: 50px;
+  margin-top: 10px;
+}
+#search_box {
+  height: 40px;
+  width: 330px;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+#magnify {
+  height: 20px;
+  width: 20px;
+  padding: 2px;
+}
+hr {
+  border-color: #e0e0e0;
+  border-top: thin;
+}
+#search_button {
+  height: 45px;
+  width: 45px;
+  background-color: #0056d2;
+  border: none;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+ul {
+  margin-top: 5px;
+  margin-left: 240px;
+}
+
+li {
+  display: inline;
+  margin-top: 0px;
+  float: right;
+}
+
+a {
+  display: block;
+  font-family: Source Sans Pro, Arial, sans-serif;
+  padding: 8px;
+  text-decoration: none;
+  margin: 5px;
+  font-size: small;
+  margin-top: 0px;
+  color: black;
+  padding: 10px;
+}
+li a:hover {
+  color: #0056d2;
+  text-decoration: underline;
+}
+li button {
+  background-color: #0056d2;
+  color: white;
+  height: 40px;
+  width: 120px;
+  border: none;
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 10px;
+  border-radius: 2px;
+}
+li button:hover {
+  background-color: darkblue;
+}
+#login {
+  color: #0056d2;
+}
+#profileLogo {
+  width: 70px;
+  height: 40.767px;
+  border-radius: 35px;
+}
+#div1 {
+  background-color: rgb(215, 238, 247);
+  display: flex;
+  width: 1500px;
+  height: 200px;
+  margin-top: 65px;
+}
+
+#div11 h1 {
+  color: #271066;
+  margin-bottom: 0px;
+
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 3rem;
+  line-height: 3.75rem;
+  font-weight: 700;
+  margin-top: 130px;
+}
+
+#div11 {
+  margin-left: 200px;
+  width: 360px;
+  height: 60px;
+}
+
+#div12 {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  margin-left: 100px;
+  border-top: 10px solid #2a73cc;
+  background-image: src
+    "https: //s3.amazonaws.com/coursera_assets/logged-in-home/header-bg-alt_optim.png";
+  width: 660px;
+  height: 174px;
+  margin-top: 10px;
+}
+
+#div12 h2 {
+  color: #1f1f1f;
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-top: 50px;
+  margin-top: 18px;
+  margin-left: 20px;
+}
+
+#div12 span {
+  line-height: 21px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: #373a3c;
+  margin-left: 20px;
+}
+
+.input1 {
+  border: none;
+  font-size: 14px;
+  border-bottom: 1px solid #2a73cc;
+  background: #f8f8f8;
+  margin: 5px 5px 7px;
+  display: inline-block;
+  width: 189px;
+  cursor: text;
+  box-sizing: inherit;
+}
+
+#leftdiv12 button {
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+
+  line-height: 1rem;
+  user-select: none;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-image: none;
+
+  font-weight: 600;
+  background-color: transparent;
+  color: rgb(42, 115, 204);
+  border-color: transparent;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#righttdiv12 button {
+  color: #2a73cc;
+  background: none;
+  border: none;
+  font-weight: 700;
+  white-space: normal;
+  text-align: left;
+  border-radius: 2px;
+  line-height: 1rem;
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.8rem;
+  min-height: 36px;
+  margin-left: 30px;
+}
+
+#righttdiv12 img {
+  float: left;
+  margin-left: 40px;
+}
+#navcontainer1 {
+  background-color: white;
+  margin-bottom: 0px;
+}
+
+#boxdiccont1 {
+  margin-left: 120px;
+  justify-content: left;
+  display: flex;
+  background-color: white;
+}
+
+#boxdiccont1 p {
+  margin-left: 120px;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#boxdiccont1 p:hover {
+  border-bottom: 20px solid rgb(0, 98, 228);
+  border-width: 3px;
+  border-spacing: 15px;
+}
+
+#boxdiccont1 a {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+#container1 {
+  background-color: rgb(245, 247, 248);
+  margin-bottom: 0px;
+  margin-top: -30px;
+}
+#container1 h2 {
+  margin-left: 150px;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 600;
+  color: rgb(31, 31, 31);
+  padding-top: 80px;
+}
+#box12 {
+  background-color: rgb(245, 247, 248);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.course {
+  margin: 25px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 15px;
+}
+.largerimage img {
+  width: 264px;
+  height: 132px;
+}
+.smallimage img {
+  margin-top: -35px;
+  width: 55px;
+  height: 55px;
+  padding-left: 20px;
+}
+
+.smallimage button {
+  float: right;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 2px solidrgb(255, 224, 87);
+  background-color: rgb(255, 224, 87);
+  border-radius: 10px;
+  font-size: 12px;
+  float: right;
+  font-weight: 600;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  margin-right: 10px;
+}
+
+.text1 {
+  margin-top: 10px;
+}
+.text1 a {
+  color: rgb(0, 86, 210);
+  text-decoration: none;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  margin-right: 20px;
+  font-size: 20px;
+}
+.text1 a:hover {
+  text-decoration: underline;
+}
+.text1 p {
+  color: rgb(102, 102, 102);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 400;
+  margin-left: 20px;
+}
+.text2 {
+  margin-top: 60px;
+}
+.text2 h4 {
+  color: rgb(102, 102, 102);
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 700;
+  margin-left: 20px;
+}
+.text2 i {
+  float: right;
+  margin-top: -40px;
+  font-size: 25px;
+  margin-right: 20px;
+  color: rgb(0, 86, 210);
+}
+.course:hover {
+  transform: scale(1.02);
+}
+
+#div6 {
+  margin-top: 40px;
+  background-color: white;
+  display: flex;
+}
+#div61 {
+  display: flex;
+  margin-left: 170px;
+  border: 1px solid whitesmoke;
+}
+#div612 img {
+  margin-left: 20px;
+}
+#div62 {
+  display: flex;
+  margin-left: 80px;
+  border: 1px solid whitesmoke;
+}
+#div622 img {
+  width: 195px;
+  height: 268px;
+}
+#div6 button {
+  /* border: 1px solid rgb(42, 115, 204); */
+  border-radius: 2px;
+  color: rgb(42, 115, 204);
+  font-size: 13px;
+  background-color: white;
+  min-height: 36px;
+  min-width: 10em;
+  font-weight: 600;
+  border-radius: 2px;
+}
+#div6 button :hover {
+  background-color: blue;
+}
+
+#footer {
+  /* width:100%; */
+  height: 500px;
+  background-color: rgb(204, 203, 203);
+}
+#footerBox {
+  /* width:100%; */
+  display: flex;
+  margin-bottom: 60px;
+  /* margin:auto; */
+}
+.footerData {
+  width: 18%;
+  margin-top: 50px;
+}
+.footerData p {
+  color: rgb(66, 65, 65);
+  font-size: 14px;
+  text-align: left;
+}
+.footerMargin {
+  margin-left: 15%;
+}
+#line {
+  width: 70%;
+  height: 2px;
+  margin: auto;
+  background-color: grey;
+}
+#footerInc {
+  display: flex;
+  margin: 50px 0px;
+}
+#footerInc p {
+  margin-left: 16%;
+  color: rgb(66, 65, 65);
+}
+#footerIncImage {
+  margin-left: 26%;
+  padding: 10px 0px;
+}
+.footerData p:hover {
+  text-decoration: underline;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  cursor: pointer;
+}

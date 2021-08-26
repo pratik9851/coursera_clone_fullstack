@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coursera | Online courses</title>
+    <link rel="stylesheet" href="/static/afterlogin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon.ico"
+    />
+  </head>
+
+  <body>
+    <div id="navbar">
+      <img
+        id="coursera-img"
+        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZpZXdCb3g9IjAgMCAxMTU1IDE2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiPjxwYXRoIGQ9Ik0xNTkuNzUgODEuNTRjMC00NC40OSAzNi42My04MC40NyA4Mi40My04MC40NyA0Ni4xMiAwIDgyLjc2IDM2IDgyLjc2IDgwLjQ3IDAgNDQuMTYtMzYuNjQgODAuOC04Mi43NiA4MC44LTQ1LjggMC04Mi40My0zNi42OC04Mi40My04MC44em0xMjUuNjEgMGMwLTIyLjI0LTE5LjMtNDEuODctNDMuMTgtNDEuODctMjMuNTUgMC00Mi44NSAxOS42My00Mi44NSA0MS44NyAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yIDIzLjkyIDAgNDMuMTgtMTkuNjMgNDMuMTgtNDIuMnptNzA1LjYzIDEuMzFjMC00OC43NCAzOS41OC04MS43OCA3NS41Ny04MS43OCAyNC41MyAwIDM4LjYgNy41MiA0OC4wOCAyMS45MmwzLjc3LTE5aDM2Ljc5djE1NS40aC0zNi43OWwtNC43NS0xNmMtMTAuNzkgMTEuNzgtMjQuMjEgMTktNDcuMSAxOS0zNS4zMy0uMDUtNzUuNTctMzEuMTMtNzUuNTctNzkuNTR6bTEyNS42MS0uMzNjLS4wOS0yMy41MjctMTkuNDctNDIuODM1LTQzLTQyLjgzNS0yMy41OSAwLTQzIDE5LjQxMS00MyA0M3YuMTY1YzAgMjEuNTkgMTkuMyA0MC44OSA0Mi44NiA0MC44OSAyMy44NSAwIDQzLjE0LTE5LjMgNDMuMTQtNDEuMjJ6TTk0NS43OCAyMlY0aC00MC4yM3YxNTUuMzloNDAuMjNWNzUuNjZjMC0yNS4xOSAxMi40NC0zOC4yNyAzNC0zOC4yNyAxLjQzIDAgMi43OS4xIDQuMTIuMjNMOTkxLjM2LjExYy0yMC45Ny4xMS0zNi4xNyA3LjMtNDUuNTggMjEuODl6bS00MDQuMjcuMDF2LTE4bC00MC4yMy4wOS4zNCAxNTUuMzcgNDAuMjMtLjA5LS4yMi04My43MmMtLjA2LTI1LjE4IDEyLjM1LTM4LjI5IDMzLjkzLTM4LjM0IDEuMzc2LjAwNCAyLjc1Mi4wODEgNC4xMi4yM0w1ODcuMSAwYy0yMSAuMTctMzYuMjIgNy4zOS00NS41OSAyMi4wMXpNMzM4Ljg4IDk5LjJWNC4wMWg0MC4yMlY5NC4zYzAgMTkuOTUgMTEuMTIgMzEuNzMgMzAuNDIgMzEuNzMgMjEuNTkgMCAzNC0xMy4wOSAzNC0zOC4yOFY0LjAxaDQwLjI0djE1NS4zOGgtNDAuMjF2LTE4Yy05LjQ4IDE0LjcyLTI0Ljg2IDIxLjkyLTQ2LjEyIDIxLjkyLTM1Ljk4LjAxLTU4LjU1LTI2LjE2LTU4LjU1LTY0LjExem0zOTEuNzQtMTcuNDhjLjA5LTQzLjUxIDMxLjIzLTgwLjc0IDgwLjYyLTgwLjY1IDQ1LjguMDkgNzguMTEgMzYuNzggNzggODAgLjAxIDQuMjczLS4zMyA4LjU0LTEgMTIuNzZsLTExOC40MS0uMjJjNC41NCAxOC42NSAxOS44OSAzMi4wOSA0My4xMiAzMi4xNCAxNC4wNiAwIDI5LjEyLTUuMTggMzguMy0xNi45NGwyNy40NCAyMmMtMTQuMTEgMTkuOTMtMzkgMzEuNjYtNjUuNDggMzEuNjEtNDYuNzUtLjE2LTgyLjY3LTM1LjIzLTgyLjU5LTgwLjd6bTExOC4xMi0xNi4xNGMtMi4yNi0xNS43LTE4LjU5LTI3Ljg0LTM3Ljg5LTI3Ljg3LTE4LjY1IDAtMzMuNzEgMTEuMDYtMzkuNjMgMjcuNzNsNzcuNTIuMTR6bS0yNjEuNCA1OS45NGwzNS43Ni0xOC43MmM1LjkxIDEyLjgxIDE3LjczIDIwLjM2IDM0LjQ4IDIwLjM2IDE1LjQzIDAgMjEuMzQtNC45MiAyMS4zNC0xMS44MiAwLTI1LTg0LjcxLTkuODUtODQuNzEtNjcgMC0zMS41MiAyNy41OC00OC4yNiA2MS43Mi00OC4yNiAyNS45NCAwIDQ4LjkyIDExLjQ5IDYxLjQgMzIuODNsLTM1LjQ0IDE4Ljc1Yy01LjI1LTEwLjUxLTE1LjEtMTYuNDItMjcuNTgtMTYuNDItMTIuMTQgMC0xOC4wNiA0LjI3LTE4LjA2IDExLjQ5IDAgMjQuMyA4NC43MSA4Ljg3IDg0LjcxIDY3IDAgMzAuMjEtMjQuNjIgNDguNTktNjQuMzUgNDguNTktMzMuODItLjAzLTU3LjQ2LTExLjE5LTY5LjI3LTM2Ljh6TTAgODEuNTRDMCAzNi43MyAzNi42My43NCA4Mi40My43NGMyNy45NDctLjE5NiA1NC4xODIgMTMuNzM3IDY5LjY3IDM3bC0zNC4zNCAxOS45MmE0Mi45NzIgNDIuOTcyIDAgMDAtMzUuMzMtMTguMzJjLTIzLjU1IDAtNDIuODUgMTkuNjMtNDIuODUgNDIuMiAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yYTQyLjUwMiA0Mi41MDIgMCAwMDM2LjMxLTIwbDM0IDIwLjI4Yy0xNS4zMDcgMjMuOTU1LTQxLjkwMiAzOC40MzEtNzAuMzMgMzguMjhDMzYuNjMgMTYyLjM0IDAgMTI1LjY2IDAgODEuNTR6IiBmaWxsPSIjMDA1NkQyIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4="
+        alt=""
+      />
+
+      <button class="select">
+        Explore
+        <div class="sub-explore">
+          <ul>
+            <li><a href="#" style="font-weight: bolder">Goals</a></li>
+            <li>
+              <a href="#" onclick="allCoursePageOpen()">Take a free course</a>
+            </li>
+            <li><a href="#">Earn a Degree </a></li>
+            <li><a href="#">Earn a Certificate </a></li>
+            <li><a href="#">Launch your Career </a></li>
+
+            <li><a href="#" style="font-weight: bolder">Subjects</a></li>
+            <li><a href="#">Data Science</a></li>
+            <li><a href="#">Computer Science</a></li>
+            <li><a href="#">Informatiom Technology</a></li>
+            <li><a href="#">Language Training</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Personal Developement</a></li>
+            <li><a href="#">Physical science and Engineering</a></li>
+            <li><a href="#">Social Science</a></li>
+            <li><a href="#">Arts and Humanities</a></li>
+            <li><a href="#">Maths and logic</a></li>
+          </ul>
+        </div>
+      </button>
+      <form id="myform">
+        <input
+          type="text"
+          id="search_box"
+          placeholder="What do you wat to learn?"
+        />
+      </form>
+      <button id="search_button" onclick="SearchButton()">
+        <img
+          id="magnify"
+          src="https://img.icons8.com/material-outlined/2x/ffffff/search.png"
+          alt=""
+        />
+      </button>
+
+      <ul>
+        <li><a><%= name %></a></li>
+        <li>
+          <div id="profile">
+            <img
+              id="profileLogo"
+              src="data:image/png;base64,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"
+              alt=""
+            />
+          </div>
+        </li>
+
+        <li><a href="allCourse.html" target="_blank">For Student</a></li>
+        <li><a href="">For Enterprise</a></li>
+      </ul>
+    </div>
+    <div id="div1">
+      <div id="div11">
+        <h1>Welcome Back!</h1>
+      </div>
+      <div id="div12">
+        <div id="leftdiv12">
+          <h2>Tell us about yourself</h2>
+          <span
+            >I am currently a
+            <input
+              type="text"
+              placeholder="software Developer / engineer"
+              class="input1"
+          /></span>
+          <br />
+          <button>Save To Profile</button>
+        </div>
+        <div id="righttdiv12">
+          <h2>SET YOUR LEARNING GOALS</h2>
+          <div>
+            <img src="briefcase.JPG" alt="" />
+            <button>Change my carrer</button>
+          </div>
+          <div></div>
+          <div>
+            <img src="graph.JPG" alt="" />
+            <button>Level up my skills</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="navcontainer1">
+      <div id="boxdiccont1">
+        <p><a href="home.html">Home</a></p>
+        <p><a href="#">In Progress</a></p>
+        <p><a href="#">Completed</a></p>
+        <p><a href="#">Saved</a></p>
+      </div>
+    </div>
+    <div id="container1">
+      <h2>Recently Viewed Courses and Specializations</h2>
+
+      <div id="box12">
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/06/734d8067a611e5a953a7b1cecd1a16/Python-Logo-2.png?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/13/7948a0d50011e58bd959a86470a32c/ACM15324_Coursera_SquareLogo_0112_SF.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="Course-detail.html" target="_blank">Python Programming</a>
+            <p>Wesleyn University</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/topics/ml/large-icon.png?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/e8/7cc3d09d3f11e698dfff46d35f2da1/Stanford_Coursera_Logo.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="Course-detail.html" target="_blank">Machine Learning</a>
+            <p>Stanford University</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/b1/319d80c6c311e6a4490975aba8dbb3/Logo_Introduction-to-Negotiation.png?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/b4/339da416653830d015f5a179f864e1/square_logo_large.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="#">Java Script</a>
+            <p>Yale University</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/e8/c700104a3711e4805271abd0a8eb20/Moncler_IMG_4315_Ottavia-Pavesi_Cover-Mafash.jpg?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/26/efd1b0521511e598980721fa57d546/logo_180x180.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="#">Algorithms</a>
+            <p>Stanford University</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container1">
+      <h2>Get Started with These Free Courses</h2>
+
+      <div id="box12">
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/94/669a20d8e511e493b80d6bde068b6d/codeyourself.jpg?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/a9/e4018cf6f3036dcc6762b8058a92f1/square.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="#">Python Programming:A <br />Concise Introduction</a>
+            <p>Wesleyn University</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/67/9b32e0140011e89140511cb73975a8/IntroCSlogo.png?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/44/8de6f8bd5ac4cf7e36bdcf7ceff393/PU_subscription_logo.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="#">Python Programming:A <br />Concise Introduction</a>
+            <p>Wesleyn University</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/08/33f720502a11e59e72391aa537f5c9/pythonlearn_thumbnail_1x1.png?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/70/de505d47be7d3a063b51b6f856a6e2/New-Block-M-Stacked-Blue-295C_600x600.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="#">Python Programming:A <br />Concise Introduction</a>
+            <p>Wesleyn University</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/06/734d8067a611e5a953a7b1cecd1a16/Python-Logo-2.png?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/13/7948a0d50011e58bd959a86470a32c/ACM15324_Coursera_SquareLogo_0112_SF.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="#">Python Programming:A <br />Concise Introduction</a>
+            <p>Wesleyn University</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container1">
+      <h2>Personalized Courses for You</h2>
+
+      <div id="box12">
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/topics/programming1/large-icon.png?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/04/1df8943d27a485a986a3ebf10c83d9/UofT-Crest-Square.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="#">Python Programming:A <br />Concise Introduction</a>
+            <p>University of Toronto</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/08/8c6610c07e11e6a7f5e70b413367a6/DMSIcon.jpg?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="#">Machine Learning</a>
+            <p>Duke University</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/dc/8d50a48fff4964bb0929f2121e461c/Logotip.png?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/02/d728c01db511e6bb400736197ca97d/logo_vert_en.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="#">Python Programming:A <br />Concise Introduction</a>
+            <p>Yale University</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+        <div class="course">
+          <div class="largerimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/e8/c700104a3711e4805271abd0a8eb20/Moncler_IMG_4315_Ottavia-Pavesi_Cover-Mafash.jpg?auto=format%2Ccompress&dpr=1&w=250"
+              alt=""
+            />
+          </div>
+          <div class="smallimage">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/26/efd1b0521511e598980721fa57d546/logo_180x180.png?auto=format%2Ccompress&dpr=1&w=80"
+              alt=""
+            />
+            <button>Free</button>
+          </div>
+          <div class="text1">
+            <a href="#">Machine Learning</a>
+            <p>Stanford University</p>
+          </div>
+          <div class="text2">
+            <h4>Course</h4>
+            <i class="fa fa-bookmark-o"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="div6">
+      <div id="div61">
+        <div id="div611">
+          <h5>FACEBOOK</h5>
+          <h3>Earn your Social Media Marketing <br />Certificate</h3>
+          <p>
+            Gain exclusive access to the new Facebook Certification <br />Carrer
+            Network
+          </p>
+
+          <button>Enroll Now</button>
+        </div>
+        <div id="div612">
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-promounit-images.s3.amazonaws.com/83/fe869576e24aa6ba31de1b165725f1/IBM_data-engineering_PC_promo-unit_MCR-2021-325-1-.png?auto=format%2Ccompress&dpr=1&w=172"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="div62">
+        <div id="div621">
+          <h5>AMAZON WEB SERVICES</h5>
+          <h3>New Aws Developer <br />Specializations</h3>
+          <p>
+            Gain in demands skills and learn to build serverless
+            <br />application fro experts at AWS
+          </p>
+
+          <button>Enroll Now</button>
+        </div>
+        <div id="div622">
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-promounit-images.s3.amazonaws.com/83/fe869576e24aa6ba31de1b165725f1/IBM_data-engineering_PC_promo-unit_MCR-2021-325-1-.png?auto=format%2Ccompress&dpr=1&w=172"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <section id="footer">
+      <div id="footerBox">
+        <div class="footerData footerMargin">
+          <h3>Start or advance your career</h3>
+
+          <p>Google Data Analyst</p>
+          <p>Google Project Management</p>
+          <p>Google UX Design</p>
+          <p>Google IT Support</p>
+        </div>
+        <div class="footerData">
+          <h3>Browse popular topics</h3>
+
+          <p>Free Courses</p>
+          <p>Learn a Language</p>
+          <p>Python</p>
+          <p>Java</p>
+        </div>
+        <div class="footerData">
+          <h3>Upskill your team</h3>
+
+          <p>Skill for Data Science Teams</p>
+          <p>Data Driven Decision Making</p>
+          <p>Software Engineering Skills</p>
+          <p>Soft Skills for Engineering Teams</p>
+        </div>
+        <div class="footerData">
+          <h3>
+            Earn a degree or certificate<br />
+            online
+          </h3>
+
+          <p>MasterTrack Certificate</p>
+          <p>Professional</p>
+          <p>University Certificate</p>
+          <p>MBA & Business Degree</p>
+        </div>
+      </div>
+      <div id="line"></div>
+      <div id="footerInc">
+        <p>© 2021 Coursera Inc. All rights reserved.</p>
+        <div id="footerIncImage">
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+            alt=""
+            class="footerIncImg"
+          />
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/linkedin.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+            alt=""
+            class="footerIncImg"
+          />
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/twitter.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+            alt=""
+            class="footerIncImg"
+          />
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/youtube.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+            alt=""
+            class="footerIncImg"
+          />
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
+            alt=""
+            class="footerIncImg"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<script>
+  function allCoursePageOpen() {
+    window.location.href = "/static/allCourse.html";
+  }
+
+  function SearchButton() {
+    window.location.href = "/static/allCourse.html";
+  }
+</script>

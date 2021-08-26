@@ -1,0 +1,1056 @@
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  width: 100%;
+  height: 55px;
+  background-color: #ffffff;
+  display: flex;
+}
+
+div > #coursera-img {
+  height: 50px;
+  width: 130px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(51, 51, 51);
+  margin-right: 10px;
+  margin-left: 5px;
+}
+select {
+  margin-left: 20px;
+  height: 35px;
+  width: 90px;
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  margin-top: 5px;
+  font-weight: bold;
+  justify-content: center;
+  font-size: medium;
+}
+select:hover {
+  background-color: white;
+  color: #0056d2;
+}
+select option {
+  padding: 10px;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  -webkit-box-align: center;
+}
+select option:hover {
+  height: 400px;
+  width: 200px;
+  background-color: transparent;
+}
+#search_box {
+  height: 40px;
+  width: 330px;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+#magnify {
+  height: 20px;
+  width: 20px;
+  padding: 2px;
+}
+hr {
+  border-top: none;
+}
+#search_button {
+  height: 40px;
+  width: 40px;
+  background-color: #0056d2;
+  border: none;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+ul {
+  margin-top: 5px;
+  margin-left: 240px;
+}
+
+li {
+  display: inline;
+  margin-top: 0px;
+  float: right;
+}
+
+a {
+  display: block;
+  font-family: Source Sans Pro, Arial, sans-serif;
+  padding: 8px;
+  text-decoration: none;
+  margin: 5px;
+  font-size: small;
+  margin-top: 0px;
+  color: black;
+  padding: 10px;
+}
+li a:hover {
+  color: #0056d2;
+  text-decoration: underline;
+}
+li button {
+  background-color: #0056d2;
+  color: white;
+  height: 40px;
+  width: 120px;
+  border: none;
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 10px;
+  border-radius: 2px;
+}
+li button:hover {
+  background-color: darkblue;
+}
+#login {
+  color: #0056d2;
+}
+#top-div {
+  height: 450px;
+  width: 100%;
+  display: flex;
+  margin-top: 0px;
+  background-image: linear-gradient(to right, #8e1918, #d0be92);
+  color: white;
+}
+
+.left-div {
+  width: 40%;
+  height: 400px;
+  margin: auto;
+  margin-left: 120px;
+}
+.right-div {
+  width: 20%;
+  height: 400px;
+}
+.a-div {
+  display: flex;
+}
+.a-div > a {
+  color: white;
+}
+.a-div span {
+  margin-top: 10px;
+}
+.a-div a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+#first-div {
+  display: flex;
+  gap: 10px;
+}
+#second-div {
+  display: flex;
+  gap: 15px;
+}
+#second-div > img {
+  border-radius: 50%;
+  height: 40px;
+}
+#second-div > button {
+  height: 20px;
+  width: 130px;
+  margin-top: 15px;
+  border-radius: 4px;
+  border-color: white;
+  background-color: #0056d2;
+  font-size: x-small;
+  color: white;
+  font-weight: bold;
+}
+#third-div {
+  display: flex;
+}
+#third-div > button {
+  height: 71px;
+  width: 200px;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 30px;
+  font-size: large;
+  background-image: #ffffff;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+#third-div button:hover {
+  background-color: #ffffff55;
+}
+#third-div > a {
+  margin-top: 80px;
+  margin-left: 10px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+#third-div a:hover {
+  text-decoration: underline;
+}
+.left-div > p {
+  font-size: large;
+  font-weight: bold;
+}
+#top-second-div {
+  display: flex;
+  height: 50px;
+  margin-top: 0px;
+  margin-left: 100px;
+}
+
+#top-second-div a {
+  font-size: large;
+  color: #3b1f1f;
+}
+#top-second-div a:hover {
+  text-decoration: underline;
+  color: #0056d2;
+  font-size: 20px;
+}
+hr {
+  border-top: none;
+  margin: 0;
+  border-color: #e1e1e1;
+}
+#show-more {
+  margin-left: 300px;
+  margin-top: 40px;
+  height: 50px;
+  width: 200px;
+  border: 1px black solid;
+  background-color: white;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 5px;
+}
+#show-more:hover {
+  background-color: #0056d2;
+  color: white;
+  border: none;
+}
+#parent-div {
+  display: flex;
+}
+#left-p-div {
+  height: 500px;
+  width: 58%;
+}
+#right-p-div {
+  height: 500px;
+  width: 42%;
+  margin-left: 60px;
+}
+.right-p1-div {
+  height: 300px;
+  width: 80%;
+  background-color: #f8f8f8;
+  font-family: OpenSans, Arial, sans-serif;
+  color: #373a6b;
+}
+.div-1 {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+.div-2 {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  margin-top: 10px;
+  height: 60px;
+}
+.div-3 {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+.div-1 > img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.div-1 h5 {
+  font-size: medium;
+}
+.div-2 > img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.div-3 > img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.div-2 h3 {
+  font-size: xx-large;
+  font-weight: lighter;
+  height: 50px;
+  width: 50px;
+}
+.div-3 h3 {
+  font-size: xx-large;
+  font-weight: lighter;
+  height: 50px;
+  width: 50px;
+}
+.div-2 p {
+  font-size: medium;
+}
+.div-3 p {
+  font-size: medium;
+}
+#skills-div {
+  height: 150px;
+  width: 800px;
+  border: 1px black solid;
+  margin-left: 10px;
+  margin-top: 40px;
+  border-color: #ebeced;
+}
+#skills1-div {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 20px;
+}
+#skills-div > h4 {
+  margin-left: 15px;
+  color: #84767f;
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+}
+#skills1-div button {
+  border-radius: 10px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #ebeced;
+  border: none;
+}
+#left-p-div {
+  margin-left: 120px;
+  text-align: justify;
+}
+#left-p-div {
+  font-family: OpenSans-Bold, OpenSans, Arial, sans-serif;
+}
+#left-p-div p {
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: rgb(55, 58, 60);
+}
+.div-4 {
+  height: 50px;
+  width: 350px;
+  display: flex;
+}
+.div-4 img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+.div-4 h3 {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.div-5 img {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+.div-5 h3 {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.div-5 {
+  height: 50px;
+  width: 350px;
+  display: flex;
+}
+.div-4 + p {
+  margin-top: 0;
+}
+.div-5 + p {
+  margin-top: 0;
+}
+.div-6 {
+  height: 50px;
+  width: 350px;
+  display: flex;
+}
+.div-6 img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+.div-6 h3 {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.div-7 img {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+.div-7 h3 {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.div-7 {
+  height: 50px;
+  width: 350px;
+  display: flex;
+}
+.div-6 + p {
+  margin-top: 0;
+}
+.div-7 + p {
+  margin-top: 0;
+}
+.div-8 img {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+.div-8 h3 {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.div-8 {
+  height: 50px;
+  width: 350px;
+  display: flex;
+}
+.div-8 + p {
+  margin-top: 0;
+}
+#instructor-div {
+  height: 300px;
+  width: 70%;
+  margin-left: 130px;
+  margin-top: 350px;
+}
+#instructor-div h3 {
+  font-family: OpenSans-Bold, OpenSans, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgb(55, 58, 60);
+}
+.img-div img {
+  border-radius: 50%;
+}
+.ins-div2 {
+  display: flex;
+}
+#details-div {
+  margin-left: 30px;
+  margin-top: 12px;
+}
+#details-div p {
+  font-family: OpenSans, Arial, sans-serif;
+  line-height: 17px;
+  font-size: small;
+  color: #6e6e6e;
+}
+#details-div h4 {
+  font-family: OpenSans, Arial, sans-serif;
+}
+#img-div h5 {
+  font-family: OpenSans, Arial, sans-serif;
+  color: #6e6e6e;
+}
+#course-div {
+  margin-left: 140px;
+}
+#course-div div {
+  width: 150px;
+}
+#uni-div {
+  display: flex;
+}
+
+#uni-details {
+  height: 100px;
+  width: 400px;
+  margin-left: 30px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+#uni-details h2 {
+  margin: 0;
+  width: 250px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(55, 58, 60);
+}
+#uni-details p {
+  width: 440px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(55, 58, 60);
+}
+#syllabus-div {
+  text-align: center;
+  margin-top: 40px;
+}
+#syllabus-div h2 {
+  font-family: OpenSans-Bold, OpenSans, Arial, sans-serif;
+  color: rgb(55, 58, 60);
+}
+#syllabus-div p {
+  font-family: OpenSans-Bold, OpenSans, Arial, sans-serif;
+  color: rgb(55, 58, 60);
+  font-weight: bold;
+}
+
+#weekly-div {
+  display: flex;
+}
+#week-left-div {
+  height: 750px;
+  width: 300px;
+  margin-left: 150px;
+}
+#week-left-div h2 {
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(0, 0, 0);
+}
+#week-left-div h1 {
+  font-family: OpenSans-Light, OpenSans, Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 72px;
+  color: rgb(0, 0, 0);
+}
+#time-div {
+  display: flex;
+}
+#time-div h5 {
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: rgb(110, 118, 127);
+  margin-top: 10px;
+}
+div h3 {
+  color: black;
+  font-family: OpenSans-Bold, OpenSans, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+div p {
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: rgb(55, 58, 60);
+}
+#time-div img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+}
+#vid-div {
+  display: flex;
+}
+#vid-div p {
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(110, 118, 127);
+}
+#vid-div img {
+  border-radius: 50%;
+  margin-right: 20px;
+  height: 40px;
+  width: 40px;
+}
+#week-right-div {
+  margin-top: 20px;
+}
+#week2-left-div {
+  height: 1500px;
+  width: 300px;
+}
+#review-div {
+  width: 100%;
+  height: 300px;
+  background-color: #f5f7fa;
+  display: flex;
+  margin-top: 50px;
+}
+
+#review-left-div {
+  height: 400px;
+  width: 20%;
+  margin-left: 150px;
+}
+#review-left-div h2 {
+  margin-top: 50px;
+  font-size: 30px;
+  font-family: OpenSans, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 42px;
+  color: rgb(55, 58, 60);
+}
+#review-left1-div {
+  margin-top: 90px;
+  display: flex;
+}
+#review-right-div {
+  height: 400px;
+  width: 80%;
+  margin-top: 100px;
+}
+#review-right-div h4 {
+  color: rgb(97, 97, 97);
+  font-family: OpenSans, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+#first {
+  margin-top: 40px;
+}
+#second {
+  margin-top: 40px;
+}
+#btn {
+  margin-top: 20px;
+  height: 50px;
+  width: 200px;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+#btn a {
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: large;
+  color: white;
+}
+#btn:hover {
+  background-color: #0056d2;
+}
+
+.popup.active .overlay {
+  display: block;
+}
+.popup.active .content {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+#head h1 {
+  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: rgb(110, 118, 127);
+}
+#footer {
+  /* width:100%; */
+  height: 500px;
+  background-color: #f5f5f5;
+}
+#footerBox {
+  /* width:100%; */
+  display: flex;
+  margin-bottom: 60px;
+  /* margin:auto; */
+}
+.footerData {
+  width: 18%;
+  margin-top: 50px;
+}
+.footerData p {
+  color: rgb(66, 65, 65);
+  font-size: 14px;
+  text-align: left;
+}
+.footerMargin {
+  margin-left: 15%;
+}
+#line {
+  width: 70%;
+  height: 2px;
+  margin: auto;
+  background-color: grey;
+}
+#footerInc {
+  display: flex;
+  margin: 50px 0px;
+}
+#footerInc p {
+  margin-left: 16%;
+  color: rgb(66, 65, 65);
+}
+#footerIncImage {
+  margin-left: 26%;
+  padding: 10px 0px;
+}
+.footerData p:hover {
+  text-decoration: underline;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background-color: rgb(214, 233, 248);
+}
+#ladyBox button:hover {
+  cursor: pointer;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background-color: blue;
+}
+#footerIncImage img:hover {
+  cursor: pointer;
+}
+
+.select {
+  margin-left: 20px;
+  height: 35px;
+  width: 90px;
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  margin-top: 5px;
+  font-weight: bold;
+  justify-content: center;
+  font-size: medium;
+  position: relative;
+}
+.select:hover {
+  background-color: white;
+  color: #0056d2;
+}
+
+.sub-explore {
+  display: none;
+  margin-top: 10px;
+}
+.select:hover .sub-explore {
+  display: block;
+  position: absolute;
+  background-color: gainsboro;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+.select:hover .sub-explore ul {
+  display: block;
+  margin: 10px;
+}
+.select:hover .sub-explore ul li {
+  width: 220px;
+
+  text-align: left;
+  list-style: none;
+}
+.select:hover .sub-explore ul:first-of-type li:first-child {
+  height: 50px;
+  margin-top: 10px;
+}
+.select:hover .sub-explore ul li:nth-child(6) {
+  height: 50px;
+  margin-top: 10px;
+}
+#enroll {
+  height: 300px;
+  width: 100%;
+  display: flex;
+}
+.enroll-div1 {
+  width: 33%;
+  margin-left: 50px;
+}
+.enroll-div1 h2 {
+  margin-left: 60px;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+.enroll-div1 h5 {
+  margin-left: 50px;
+  line-height: 20px;
+  padding: 0px;
+  margin-top: 0;
+}
+.enroll-div1 h5 a {
+  color: #0056d2;
+}
+.enroll-div1 h5 a:hover {
+  text-decoration: underline;
+}
+.enroll-div1 span {
+  font-weight: bold;
+}
+.enroll-div1 p {
+  margin-left: 60px;
+  margin-top: 40px;
+}
+.enroll-div1 button {
+  margin-left: 60px;
+  background-color: #0056d2;
+  border: none;
+  border-radius: 5px;
+  height: 70px;
+  width: 180px;
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: medium;
+}
+.enroll-div1 button:hover {
+  background-color: lightslategray;
+  border: #0056d2 1px solid;
+}
+.enroll-div2 {
+  width: 33%;
+  margin-top: 40px;
+  text-align: justify;
+}
+.enroll-div2 h4 {
+  margin-top: 20px;
+}
+.enroll-div3 {
+  height: 100px;
+  width: 33%;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+.enroll-div3 img {
+  height: 200px;
+}
+#faq {
+  width: 100%;
+  height: 500px;
+  background-color: #f5f7fa;
+}
+#faq h1 {
+  margin-left: 450px;
+  margin-top: 40px;
+  color: #373a3c;
+  font-family: OpenSans-Bold, OpenSans, Arial, sans-serif;
+}
+#faq-div1 {
+  width: 70%;
+  height: 250px;
+  margin-left: 200px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: #373a3c;
+  margin-top: 50px;
+}
+#faq-div1 h4 {
+  font-weight: bolder;
+}
+#faq-div2 {
+  width: 70%;
+  height: 250px;
+  margin-left: 200px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: #373a3c;
+}
+#faq-div2 h4 {
+  font-weight: bolder;
+}
+
+.machineLearning {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  display: none;
+}
+#mbox {
+  width: 600px;
+  height: 450px;
+  background-color: white;
+  border-radius: 4px;
+  /* padding-left: 40px; */
+  position: relative;
+}
+#topBox1 {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(34, 49, 90);
+  color: white;
+  font-size: 30px;
+  font-family: OpenSans-light, Arial, sans-serif;
+}
+#lowerBox1 {
+  width: 100%;
+  height: 250px;
+}
+#lowerBox1 input,
+#lowerBox1 div {
+  margin-left: 8%;
+  margin-top: 40px;
+}
+#lowerBox1 span {
+  font-size: 22px;
+  font-family: OpenSans-light, Arial, sans-serif;
+  color: rgb(65, 65, 65);
+}
+#lowerBox1 span:hover {
+  cursor: pointer;
+}
+#smallText {
+  width: 100%;
+  display: flex;
+}
+#smallText img {
+  width: 3%;
+  height: 35px;
+  margin-top: -4.5%;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+#smallText p {
+  font-size: 18px;
+  font-family: OpenSans-light, Arial, sans-serif;
+  margin-top: -5%;
+}
+#withoutImg {
+  margin-left: 20px;
+}
+#continueBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#continueButt {
+  width: 30%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-family: OpenSans-light, Arial, sans-serif;
+  background-color: rgb(61, 138, 226);
+  color: white;
+  border-radius: 2px;
+}
+#continueButt:hover {
+  background-color: rgb(4, 71, 160);
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  color: grey;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+ul {
+  margin-top: 5px;
+  margin-left: 240px;
+}
+
+li {
+  display: inline;
+  margin-top: 0px;
+  float: right;
+}
+
+a {
+  display: block;
+  font-family: Source Sans Pro, Arial, sans-serif;
+  padding: 8px;
+  text-decoration: none;
+  margin: 5px;
+  font-size: small;
+  margin-top: 0px;
+  color: black;
+  padding: 10px;
+}
+li a:hover {
+  color: #0056d2;
+  text-decoration: underline;
+}
+li button {
+  background-color: #0056d2;
+  color: white;
+  height: 40px;
+  width: 120px;
+  border: none;
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 10px;
+  border-radius: 2px;
+}
+li button:hover {
+  background-color: darkblue;
+}
+#login {
+  color: #0056d2;
+}
+
+#profile {
+  width: 80px;
+  height: 45px;
+  margin-left: 20px;
+  padding-top: -2px;
+}
+#profileLogo {
+  width: 90%;
+  height: 50px;
+  border-radius: 75%;
+  margin-top: -5px;
+}
+#profile:hover {
+  background-color: rgb(212, 211, 211);
+}
