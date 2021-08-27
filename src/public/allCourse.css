@@ -18,6 +18,7 @@ div > #coursera-img {
   color: rgb(51, 51, 51);
   margin-right: 10px;
   margin-left: 5px;
+  margin-left: 30px;
 }
 .select {
   margin-left: 20px;
@@ -38,42 +39,34 @@ div > #coursera-img {
   color: #0056d2;
 }
 
-.sub-explore{
+.sub-explore {
   display: none;
   margin-top: 10px;
-
 }
-.select:hover .sub-explore{
+.select:hover .sub-explore {
   display: block;
   position: absolute;
   background-color: gainsboro;
   margin-top: 15px;
   margin-left: 5px;
-
 }
-.select:hover .sub-explore ul{
+.select:hover .sub-explore ul {
   display: block;
   margin: 10px;
-  
 }
-.select:hover .sub-explore ul li{
+.select:hover .sub-explore ul li {
   width: 220px;
-  
+
   text-align: left;
   list-style: none;
-  
-
-  
-} 
-.select:hover .sub-explore ul:first-of-type li:first-child{
-  height: 50px;
-  margin-top: 10px;
-  
 }
-.select:hover .sub-explore ul li:nth-child(6){
+.select:hover .sub-explore ul:first-of-type li:first-child {
   height: 50px;
   margin-top: 10px;
-  
+}
+.select:hover .sub-explore ul li:nth-child(6) {
+  height: 50px;
+  margin-top: 10px;
 }
 #search_box {
   height: 40px;
@@ -283,10 +276,42 @@ button:hover {
   border-radius: 75%;
   margin-top: -5px;
 }
-#profile:hover {
-  background-color: rgb(212, 211, 211);
-}
+
 .courseName:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+#profileBox {
+  width: 20%;
+  height: 334px;
+  border: 1px solid black;
+  margin-left: 80%;
+  margin-top: 10px;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  display: none;
+}
+#profileBox div {
+  border: 1px solid white;
+  height: 40px;
+  padding-left: 15px;
+  padding-top: -5px;
+}
+#profileBox div:hover {
+  background-color: rgb(180, 179, 179);
+  cursor: pointer;
+}
+
+.colorChange {
+  width: 235px;
+  margin-left: 45px;
+  height: 45px;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+.colorChange:hover {
+  background-color: rgb(213, 214, 214);
 }

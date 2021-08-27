@@ -23,4 +23,25 @@ router.post("",async function(req,res){
         res.send(err.message)
     }
 })
+
+router.get("/name",async function(req,res){
+    try {
+        console.log(req.query.search);
+        const courses = await Course.find().lean().exec()
+        var data = [];
+        courses.forEach((el) => {
+          
+            if (el.name[0] == req.query.search) { 
+                data.push(el);
+            }
+        })
+        return res.send(data)
+    }
+    catch(err){
+        res.send(err.message)
+    }
+})
+
+
+
 module.exports=router

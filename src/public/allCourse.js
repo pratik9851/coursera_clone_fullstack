@@ -101,7 +101,7 @@ function showData(d) {
 };
 
 function courseDetailsPage() {
-  window.location.href = "Course-detail.html";
+  window.location.href = "http://localhost:2355/courseDetail";
 }
 
 
@@ -143,3 +143,17 @@ async function adddur(e) {
     showData(arr);
   }
 };
+
+
+function showProfile() {
+    console.log("hII");
+    document.querySelector("#profileBox").style.display = "block";
+
+    document.body.addEventListener("dblclick", () => {
+      document.querySelector("#profileBox").style.display = "none";
+    });
+}
+  
+function logout() {
+    window.location.href = "/static/home.html";
+}
