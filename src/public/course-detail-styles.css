@@ -22,6 +22,7 @@ div > #coursera-img {
   color: rgb(51, 51, 51);
   margin-right: 10px;
   margin-left: 5px;
+  margin-left: 30px;
 }
 select {
   margin-left: 20px;
@@ -1051,6 +1052,37 @@ li button:hover {
   border-radius: 75%;
   margin-top: -5px;
 }
-#profile:hover {
-  background-color: rgb(212, 211, 211);
+
+#profileBox {
+  width: 20%;
+  height: 334px;
+  border: 1px solid black;
+  margin-left: 80%;
+  margin-top: 10px;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  display: none;
+}
+#profileBox div {
+  border: 1px solid white;
+  height: 40px;
+  padding-left: 15px;
+  padding-top: -5px;
+}
+#profileBox div:hover {
+  background-color: rgb(180, 179, 179);
+  cursor: pointer;
+}
+
+.colorChange {
+  width: 235px;
+  margin-left: 45px;
+  height: 45px;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+.colorChange:hover {
+  background-color: rgb(213, 214, 214);
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="allCourse.css" />
+    <link rel="stylesheet" href="/static/allCourse.css" />
   </head>
   <body>
     <!-- Navigation Bar  -->
@@ -65,7 +65,7 @@
             <div onclick="showProfile()"><a><%= name %></a></div>
           </div>
         </li>
-
+          <li style="margin-top: 9px; height: 40px;">&#9475</li>
         <li style="padding-top: 5px">
           <a href="allCourse.html" target="_blank">For Student</a>
         </li>
@@ -73,9 +73,17 @@
           <a href="">For Enterprise</a>
         </li>
     </div>
-    
     <!-- Navigation Bar End -->
-
+     <div id="profileBox">
+      <div><p>My Courses</p></div>
+      <div><p>Profile</p></div>
+      <div><p>My Purschases</p></div>
+      <div><p>Setting</p></div>
+      <div><p>Update</p></div>
+      <div><p>Accomplishment</p></div>
+      <div><p>Help Center</p></div>
+      <div onclick="logout()"><p>Logout</p></div>
+    </div>
     <!-- Filter Box -->
     <div id="filterBoxex">
       <h2>Showing 1779 total results for "free"</h2>
@@ -211,4 +219,4 @@
   </body>
 </html>
 
-<script src="allCourse.js"></script>
+<script src="/static/allCourse.js"></script>

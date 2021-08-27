@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="course-detail-styles.css">
+    <link rel="stylesheet" href="/static/course-detail-styles.css">
     <link rel="shortcut icon" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon.ico">
 </head>
 <body>
@@ -79,6 +79,17 @@
           <a href="">For Enterprise</a>
         </li>
 
+    </div>
+
+      <div id="profileBox">
+      <div><p>My Courses</p></div>
+      <div><p>Profile</p></div>
+      <div><p>My Purschases</p></div>
+      <div><p>Setting</p></div>
+      <div><p>Update</p></div>
+      <div><p>Accomplishment</p></div>
+      <div><p>Help Center</p></div>
+      <div onclick="logout()"><p>Logout</p></div>
     </div>
 
     <div class="machineLearning">
@@ -581,7 +592,8 @@
     });
 
     function goToPayment(){
-        window.location.href = "cart.html";
+      
+        window.location.href = "/static/cart.html";
     }
 
     function showProfile() {
@@ -591,6 +603,10 @@
     document.body.addEventListener("dblclick", () => {
       document.querySelector("#profileBox").style.display = "none";
     });
+  }
+
+function logout() {
+    window.location.href = "/static/home.html";
   }
 
 </script>
