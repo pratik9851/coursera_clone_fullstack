@@ -30,8 +30,6 @@ var userName;
 var purshasesStatus;
 
 app.get("/afterLogin", (req, res) => {
-    console.log("hii form testing");
-    console.log(req.query.name);
     userName = req.query.name;
     var user = req.query.name;
     res.render("afterlogin", {
@@ -41,8 +39,6 @@ app.get("/afterLogin", (req, res) => {
 })
 
 app.get("/allcourse", (req, res) => {
-    console.log("hii form allcourse");
-    console.log(req.query.name);
     userName = req.query.name;
     res.render("allCourse", {
       name: req.query.name,
@@ -51,15 +47,12 @@ app.get("/allcourse", (req, res) => {
 
 
 app.get("/courseDetail", (req, res) => {
-    console.log("hii form course-detail");
-    console.log(userName);
     res.render("course-detail.ejs", {
       name: userName,
     });
 })
 
 app.get("/myPurchase", (req, res) => {
-    console.log(userName);
     purshasesStatus = req.query.purched;
     console.log(purshasesStatus);
     res.render("myPurchase.ejs", {

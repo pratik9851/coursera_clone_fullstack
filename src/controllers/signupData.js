@@ -6,7 +6,6 @@ const Signup = require("../models/signup.model");
 
 router.post("/signup", async function (req, res) {
     try {
-       // console.log(req.body);
         const signup = await Signup.create(req.body);
         return res.send(signup);
     }
@@ -18,7 +17,6 @@ router.post("/signup", async function (req, res) {
 
 router.get("/logindata/:id", async function (req, res) {
     try {
-        console.log("hii");
         let signup = await Signup.find().lean().exec()
 
         

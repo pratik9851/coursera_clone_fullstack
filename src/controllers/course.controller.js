@@ -26,7 +26,6 @@ router.post("",async function(req,res){
 
 router.get("/name",async function(req,res){
     try {
-        console.log(req.query.search);
         const courses = await Course.find().lean().exec()
         var data = [];
         courses.forEach((el) => {
@@ -34,7 +33,7 @@ router.get("/name",async function(req,res){
             if (el.name[0] == req.query.search) {
                 data.push(el);
             }
-        });  console.log(data);
+        });  
         return res.send(data)
     }
     catch(err){

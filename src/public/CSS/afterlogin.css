@@ -2,9 +2,9 @@ body {
   margin: 0px;
   background-color: white;
 }
-.nav-container{
-    position: relative;
-    z-index: 2;
+.nav-container {
+  position: relative;
+  z-index: 2;
 }
 #navbar {
   width: 100%;
@@ -26,6 +26,7 @@ div > #coursera-img {
   color: rgb(51, 51, 51);
   margin-right: 10px;
   margin-left: 5px;
+  margin-left: 30px;
 }
 .select {
   margin-left: 20px;
@@ -86,6 +87,8 @@ div > #coursera-img {
   height: 20px;
   width: 20px;
   padding: 2px;
+  margin-left: -10px;
+  margin-top: -8px;
 }
 hr {
   border-color: #e0e0e0;
@@ -301,10 +304,9 @@ li button:hover {
   margin-top: -30px;
   padding-left: 10%;
   padding-right: 10%;
-  
 }
 #container1 h2 {
-  margin-left:10px;
+  margin-left: 10px;
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-weight: 600;
   color: rgb(31, 31, 31);
@@ -322,7 +324,6 @@ li button:hover {
   background-color: rgb(255, 255, 255);
   margin-top: 15px;
   padding: 5px;
- 
 }
 .largerimage img {
   width: 244px;
@@ -358,7 +359,6 @@ li button:hover {
   font-family: "Source Sans Pro", Arial, sans-serif;
   margin-right: 20px;
   font-size: 20px;
- 
 }
 .text1 a:hover {
   text-decoration: underline;
@@ -372,7 +372,7 @@ li button:hover {
   margin-left: 20px;
 }
 .text2 {
-  margin-top: 60px ;
+  margin-top: 60px;
 }
 .text2 h4 {
   color: rgb(102, 102, 102);
@@ -471,7 +471,6 @@ li button:hover {
   font-family: "Source Sans Pro", Arial, sans-serif;
   cursor: pointer;
 }
-<<<<<<< HEAD
 #profileBox {
   width: 20%;
   height: 334px;
@@ -532,5 +531,3 @@ li button:hover {
   padding-top: 20px;
   padding-left: 10px;
 }
-=======
->>>>>>> e961e554df15683f6aba9d626fb3f9e5a7ea2c8c
