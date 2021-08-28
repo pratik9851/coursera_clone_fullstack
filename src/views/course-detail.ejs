@@ -84,7 +84,7 @@
       <div id="profileBox">
       <div><p>My Courses</p></div>
       <div><p>Profile</p></div>
-      <div><p>My Purschases</p></div>
+      <div onclick="myPurchase()"><p>My Purschases</p></div>
       <div><p>Setting</p></div>
       <div><p>Update</p></div>
       <div><p>Accomplishment</p></div>
@@ -605,8 +605,13 @@
     });
   }
 
-function logout() {
-    window.location.href = "/static/home.html";
-  }
+    function logout() {
+       window.location.href = "http://localhost:2355/logout";
+    }
+
+  
+    function myPurchase() {
+      window.location.href = "http://localhost:2355/myPurchase";
+    }
 
 </script>

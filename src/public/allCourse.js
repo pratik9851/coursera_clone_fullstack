@@ -155,5 +155,9 @@ function showProfile() {
 }
   
 function logout() {
-    window.location.href = "/static/home.html";
+    window.location.href = "http://localhost:2355/logout";
+}
+
+function myPurchase() {
+      window.location.href = "http://localhost:2355/myPurchase";
 }

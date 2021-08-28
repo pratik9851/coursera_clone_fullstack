@@ -31,10 +31,10 @@ router.get("/name",async function(req,res){
         var data = [];
         courses.forEach((el) => {
           
-            if (el.name[0] == req.query.search) { 
+            if (el.name[0] == req.query.search) {
                 data.push(el);
             }
-        })
+        });  console.log(data);
         return res.send(data)
     }
     catch(err){

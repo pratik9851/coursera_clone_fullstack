@@ -7,10 +7,7 @@ const cors = require("cors");
 
 const connect = require("./config/db");
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 1881829092292e50b4f786e94899e045e6358cc1
 const Signup = require("./models/signup.model");
 
 const signupcontroller = require("./controllers/signupData");
@@ -29,10 +26,10 @@ app.use("/static", express.static(path.join(__dirname, "public")));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-<<<<<<< HEAD
 var userName;
+var purshasesStatus;
 
-app.get("/", (req, res) => {
+app.get("/afterLogin", (req, res) => {
     console.log("hii form testing");
     console.log(req.query.name);
     userName = req.query.name;
@@ -61,32 +58,45 @@ app.get("/courseDetail", (req, res) => {
     });
 })
 
+app.get("/myPurchase", (req, res) => {
+    console.log(userName);
+    purshasesStatus = req.query.purched;
+    console.log(purshasesStatus);
+    res.render("myPurchase.ejs", {
+      name: userName,
+    });
+})
 
 
 
-=======
->>>>>>> 1881829092292e50b4f786e94899e045e6358cc1
+app.get("/logout", (req, res) => {
+    
+    res.render("home.ejs");
+})
+
+
+app.get("", (req, res) => {
+    console.log("hii form course-home");
+    res.render("home.ejs");
+})
+
+app.get("/statusFlag", async function (req, res) {
+    
+    try {
+        console.log("flag");
+        return res.send({status:purshasesStatus});
+    }
+    catch {
+        return res.send(err.message);
+    }
+});
+
 app.use("/courses",courseController)
 
 app.use("/users", signupcontroller);
 
-<<<<<<< HEAD
 app.listen(2355, async () => {
     await connect();
     console.log("listening to port 2355");
 });
-=======
->>>>>>> 1881829092292e50b4f786e94899e045e6358cc1
-
-
-
-    
-
-<<<<<<< HEAD
-=======
-app.listen(2355,async ()=>{
-     await connect();
-    console.log("listing to port 2355");
-})
->>>>>>> 1881829092292e50b4f786e94899e045e6358cc1
 

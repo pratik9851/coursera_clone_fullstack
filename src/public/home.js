@@ -109,7 +109,7 @@
                     document.querySelector(".bg-model_login").style.display = "none";
                     document.body.style.background = "none";
                     const name = data.name;
-                    window.location.href = `http://localhost:2355?name=${name}`;
+                    window.location.href = `http://localhost:2355/afterLogin?name=${name}`;
                     return;
                 }
         
