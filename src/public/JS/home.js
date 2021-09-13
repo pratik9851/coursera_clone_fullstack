@@ -91,7 +91,7 @@
             })
               
            function check(data){
-               console.log(data);
+               
                 if (data.email == username && data.password == password) {
                     
                     document.querySelector(".bg-model_login").style.display = "none";

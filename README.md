@@ -17,6 +17,12 @@
 
 - Google Fonts
 - Font Awesome
+
+ ## Getting Started
+
+ - Clone the files in your local directory
+ - Start server with the command npm run server
+ - Search on your browser http://localhost:2355/
  
   ## SCREENSHOTS
   
