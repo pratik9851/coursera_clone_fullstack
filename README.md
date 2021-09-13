@@ -1,4 +1,5 @@
-# courseera-clone
+# coursera_clone_fullstack
+
 
 <p>
 
@@ -8,6 +9,8 @@
   -   HTML
   -   CSS
   -   JAVASCRIPT
+  -   MongoDB
+  -   Express
   -   CHROME DEVTOOLS
   
   ## External Libraries
