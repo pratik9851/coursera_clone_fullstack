@@ -33,7 +33,7 @@
             
        
         userAllData = JSON.stringify(userAllData);
-        console.log(userAllData);
+       
         
         fetch("http://localhost:2355/users/signup", {
             method: "Post",
@@ -54,18 +54,6 @@
             })
         
 
-        // let arr;
-        // arr = localStorage.getItem("signUpData");
-
-        // if(arr==null){
-        //     arr = [];
-        // }else{
-        //     arr = JSON.parse(localStorage.getItem("signUpData"));
-        // }
-
-        // arr.push(userAllData);
-        // localStorage.setItem("signUpData", JSON.stringify(arr));
-        
 
         document.body.style.background = "rgba(0, 0, 0, 0.7)";
         document.querySelector(".bg-model_login").style.display = "flex";
@@ -105,7 +93,7 @@
            function check(data){
                console.log(data);
                 if (data.email == username && data.password == password) {
-                    console.log("**");
+                    
                     document.querySelector(".bg-model_login").style.display = "none";
                     document.body.style.background = "none";
                     const name = data.name;
