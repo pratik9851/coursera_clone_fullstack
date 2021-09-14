@@ -12,7 +12,7 @@ body {
   background-color: #ffffff;
   display: flex;
   border-bottom: 1px solid black;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
 }
 
@@ -162,7 +162,7 @@ li button:hover {
   display: flex;
   width: 1500px;
   height: 200px;
-  margin-top: 65px;
+  /* margin-top: 65px; */
 }
 
 #div11 h1 {

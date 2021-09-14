@@ -692,3 +692,24 @@ button:hover {
   transform: rotate(45deg);
   cursor: pointer;
 }
+
+#validateBox {
+  margin: 0px, 10px;
+  display: none;
+}
+
+#validateBox p {
+  margin: 0;
+  margin-left: -222px;
+  color: red;
+}
+
+#validateBox2 {
+  display: none;
+}
+
+#validateBox2 p {
+  margin: 0;
+  margin-left: -222px;
+  color: red;
+}

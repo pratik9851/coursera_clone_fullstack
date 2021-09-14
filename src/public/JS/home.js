@@ -14,66 +14,79 @@
         
         e.preventDefault();
 
-        document.querySelector(".bg-model").style.display = "none";
-        document.body.style.background = "none";
+       
 
         let userData = document.getElementById("signUPForm");
 
         const name = userData.name.value;
         const email = userData.email.value;
         const password = userData.password.value;
-        let userAllData;
+
+        let temp = "" + password;
+
+        if (name == "" || email == "" || password == "") {
+
+            document.getElementById("validateBox").style.display = "block";
+
+        }
+        else {
+           
+             document.querySelector(".bg-model").style.display = "none";
+             document.body.style.background = "none";
+
+            let userAllData;
 
       
-           userAllData = {
-               name,
-               email,
-               password
-           };
+            userAllData = {
+                name,
+                email,
+                password
+            };
             
        
-        userAllData = JSON.stringify(userAllData);
-        console.log(userAllData);
+            userAllData = JSON.stringify(userAllData);
+            console.log(userAllData);
         
-        fetch("http://localhost:2355/users/signup", {
-            method: "Post",
-            body: userAllData,
+            fetch("http://localhost:2355/users/signup", {
+                method: "Post",
+                body: userAllData,
 
-             headers: {
-               "Content-Type": "application/json",
-             },
-        })
-            .then((res) => {
-                return res.json();
+                headers: {
+                    "Content-Type": "application/json",
+                },
             })
-            .then((res) => {
-                console.log(res);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-        
-
-        // let arr;
-        // arr = localStorage.getItem("signUpData");
-
-        // if(arr==null){
-        //     arr = [];
-        // }else{
-        //     arr = JSON.parse(localStorage.getItem("signUpData"));
-        // }
-
-        // arr.push(userAllData);
-        // localStorage.setItem("signUpData", JSON.stringify(arr));
+                .then((res) => {
+                    return res.json();
+                })
+                .then((res) => {
+                    console.log(res);
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
         
 
-        document.body.style.background = "rgba(0, 0, 0, 0.7)";
-        document.querySelector(".bg-model_login").style.display = "flex";
+            // let arr;
+            // arr = localStorage.getItem("signUpData");
 
-        document.querySelector(".close2").addEventListener("click", function () {
-            document.querySelector(".bg-model_login").style.display = "none";
-            document.body.style.background = "none";
-        });
+            // if(arr==null){
+            //     arr = [];
+            // }else{
+            //     arr = JSON.parse(localStorage.getItem("signUpData"));
+            // }
+
+            // arr.push(userAllData);
+            // localStorage.setItem("signUpData", JSON.stringify(arr));
+        
+
+            document.body.style.background = "rgba(0, 0, 0, 0.7)";
+            document.querySelector(".bg-model_login").style.display = "flex";
+
+            document.querySelector(".close2").addEventListener("click", function () {
+                document.querySelector(".bg-model_login").style.display = "none";
+                document.body.style.background = "none";
+            });
+        }
       
         }
    
@@ -85,37 +98,41 @@
             const username = form.email.value;
             const password = form.password.value;
 
-         
+          
             console.log(username, password);
 
-            fetch(`http://localhost:2355/users/logindata/${username}`, {
-                method: "Get",
-                
-           })
-            .then((res) => {
-                return res.json();
-            })
-            .then((res) => {
-                check(res);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-              
-           function check(data){
-               console.log(data);
-                if (data.email == username && data.password == password) {
-                    console.log("**");
-                    document.querySelector(".bg-model_login").style.display = "none";
-                    document.body.style.background = "none";
-                    const name = data.name;
-                    window.location.href = `http://localhost:2355/afterLogin?name=${name}`;
-                    return;
-                }
-        
-                alert("Invalid Credentials");
+            if (username == "" || password == "") {
+                document.getElementById("validateBox2").style.display = "block";
             }
-
+            else {
+                fetch(`http://localhost:2355/users/logindata/${username}`, {
+                    method: "Get",
+                
+                })
+                    .then((res) => {
+                        return res.json();
+                    })
+                    .then((res) => {
+                        check(res);
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    })
+              
+                function check(data) {
+                    console.log(data);
+                    if (data.email == username && data.password == password) {
+                        console.log("**");
+                        document.querySelector(".bg-model_login").style.display = "none";
+                        document.body.style.background = "none";
+                        const name = data.name;
+                        window.location.href = `http://localhost:2355/afterLogin?name=${name}`;
+                        return;
+                    }
+        
+                    alert("Invalid Credentials");
+                }
+            }
         };
         
         

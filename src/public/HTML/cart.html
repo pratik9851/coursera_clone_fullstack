@@ -238,6 +238,14 @@
          background-color: rgb(51, 51, 240);
           cursor: pointer;
       }
+        #vaidate {
+        color: red;
+        margin-left: 30px;
+        margin-top: 0px;
+      }
+      #validateBox{
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -260,12 +268,30 @@
           ><span style="margin-left: 60%; color: grey">+9988776655</span>
         </div>
         <div class="inputNumber">
-          <input type="number" placeholder="Card Number" class="cardNum" />
-          <input type="number" placeholder="Expiry" class="expiry" />
+          <input
+            type="number"
+            placeholder="Card Number"
+            class="cardNum"
+            id="num"
+          />
+          <input
+            type="number"
+            placeholder="Expiry"
+            class="expiry"
+            id="expiry"
+          />
         </div>
         <div class="inputNumber">
-          <input type="text" placeholder="Card Holder's name" class="cardNum" />
-          <input type="number" placeholder="CVV" class="expiry" />
+          <input
+            type="text"
+            placeholder="Card Holder's name"
+            class="cardNum"
+            id="name"
+          />
+          <input type="password" placeholder="CVV" class="expiry" id="cvv" />
+        </div>
+        <div id="validateBox">
+          <p id="vaidate">Please fill all card deatils</p>
         </div>
         <div id="checkbox">
           <input type="checkbox" id="checkboxx" />
@@ -436,14 +462,29 @@
   });
 
   function payNow() {
-    let paybtt = document.getElementById("bottomBox");
-    let img = document.createElement("img");
-    img.setAttribute("class", "lodingGif");
-    img.src = "https://i.gifer.com/ZZ5H.gif";
+    let num = document.getElementById("num").value;
+    let expiry = document.getElementById("expiry").value;
+    let name = document.getElementById("name").value;
+    let cvv = document.getElementById("cvv").value;
 
-    paybtt.append(img);
-    setTimeout(function () {
-      window.location.href = "sucess.html";
-    }, 5000);
+    let temp1 = "" + num;
+    let temp2 = "" + expiry;
+    let temp3 = "" + name;
+    let temp4 = "" + cvv;
+
+    if (temp1 == "" || temp2 == "" || temp3 == "" || temp4 == "") {
+      document.getElementById("validateBox").style.display = "block";
+    } else {
+      document.getElementById("validateBox").style.display = "none";
+      let paybtt = document.getElementById("bottomBox");
+      let img = document.createElement("img");
+      img.setAttribute("class", "lodingGif");
+      img.src = "https://i.gifer.com/ZZ5H.gif";
+
+      paybtt.append(img);
+      setTimeout(function () {
+        window.location.href = "sucess.html";
+      }, 5000);
+    }
   }
 </script>
