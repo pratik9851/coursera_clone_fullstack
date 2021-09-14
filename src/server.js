@@ -52,9 +52,15 @@ app.get("/courseDetail", (req, res) => {
     });
 })
 
+
+app.get("/goToAfterLogin", (req, res) => {
+    res.render("afterlogin", {
+      name: userName,
+    });
+})
+
 app.get("/myPurchase", (req, res) => {
     purshasesStatus = req.query.purched;
-    console.log(purshasesStatus);
     res.render("myPurchase.ejs", {
       name: userName,
     });
@@ -69,14 +75,12 @@ app.get("/logout", (req, res) => {
 
 
 app.get("", (req, res) => {
-    console.log("hii form course-home");
     res.render("home.ejs");
 })
 
 app.get("/statusFlag", async function (req, res) {
     
     try {
-        console.log("flag");
         return res.send({status:purshasesStatus});
     }
     catch {
