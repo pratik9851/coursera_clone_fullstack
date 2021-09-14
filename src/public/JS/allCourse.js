@@ -91,7 +91,7 @@ function showData(d) {
 
       data.forEach(function (el) {
         if (selectValue.value == el.level) {
-          console.log(el);
+          
           arr.push(el);
         }
       });
@@ -117,7 +117,7 @@ function courseDetailsPage() {
 
     data.forEach(function (el) {
       if (selectValue.value == el.lang) {
-        console.log(el);
+       
         arr.push(el);
       }
     });
@@ -136,7 +136,7 @@ async function adddur(e) {
 
     data.forEach(function (el) {
       if (selectValue.value == el.courseduration) {
-        console.log(el);
+        
         arr.push(el);
       }
     });
@@ -146,7 +146,7 @@ async function adddur(e) {
 
 
 function showProfile() {
-    console.log("hII");
+    
     document.querySelector("#profileBox").style.display = "block";
 
     document.body.addEventListener("dblclick", () => {
