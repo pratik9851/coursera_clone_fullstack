@@ -21,6 +21,7 @@
  ## Getting Started
 
  - Clone the files in your local directory
+ - run the command npm install
  - Start server with the command npm run server
  - Search on your browser http://localhost:2355/
  
