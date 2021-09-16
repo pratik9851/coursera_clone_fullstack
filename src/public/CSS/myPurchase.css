@@ -20,6 +20,11 @@ div > #coursera-img {
   margin-left: 5px;
   margin-left: 30px;
 }
+
+#coursera-img:hover {
+  cursor: pointer;
+}
+
 .select {
   margin-left: 20px;
   height: 40px;

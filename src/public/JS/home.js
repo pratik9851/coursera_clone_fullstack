@@ -24,7 +24,7 @@
 
         let temp = "" + password;
 
-        if (name == "" || email == "" || password == "") {
+        if (name.trim() == "" || email.trim() == "" || password.trim() == "") {
 
             document.getElementById("validateBox").style.display = "block";
 
@@ -89,7 +89,7 @@
           
             console.log(username, password);
 
-            if (username == "" || password == "") {
+            if (username.trim() == "" || password.trim() == "") {
                 document.getElementById("validateBox2").style.display = "block";
             }
             else {
