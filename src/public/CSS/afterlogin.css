@@ -53,7 +53,7 @@ div > #coursera-img {
   margin-top: 10px;
 }
 .select:hover .sub-explore {
-  display: block;
+  display: none;
   position: absolute;
   background-color: gainsboro;
   margin-top: 15px;
