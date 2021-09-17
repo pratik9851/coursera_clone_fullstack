@@ -472,12 +472,7 @@
     let temp3 = "" + name;
     let temp4 = "" + cvv;
 
-    if (
-      temp1.tirm() == "" ||
-      temp2.trim() == "" ||
-      temp3.trim() == "" ||
-      temp4.trim() == ""
-    ) {
+    if (temp1 == "" || temp2 == "" || temp3.trim() == "" || temp4 == "") {
       document.getElementById("validateBox").style.display = "block";
     } else {
       document.getElementById("validateBox").style.display = "none";
