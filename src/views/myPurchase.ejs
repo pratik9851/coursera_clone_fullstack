@@ -311,16 +311,16 @@ function showProfile() {
 }
   
 function logout() {
-    window.location.href = "http://localhost:2355/logout";
+    window.location.href = "https://murmuring-brook-47360.herokuapp.com/logout";
 }
 
 function goToAfterLoginPage() {
-    window.location.href = `http://localhost:2355/goToAfterLogin`;
+    window.location.href = ` https://murmuring-brook-47360.herokuapp.com/goToAfterLogin`;
 }
 
 function purchasesStatus(){
 
-    fetch(`http://localhost:2355/statusFlag`, {
+    fetch(` https://murmuring-brook-47360.herokuapp.com/statusFlag`, {
       method: "Get",
     })
       .then((res) => {

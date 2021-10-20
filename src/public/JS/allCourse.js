@@ -60,7 +60,7 @@ function showData(d) {
     });
   }
 
-  fetch(`http://localhost:2355/courses`, {
+  fetch(` https://murmuring-brook-47360.herokuapp.com/courses`, {
     method: "Get",
     
 })
@@ -80,7 +80,7 @@ function showData(d) {
 
   async function addFilter(e) {
   
-    let res =await  fetch(`http://localhost:2355/courses`)
+    let res =await  fetch(` https://murmuring-brook-47360.herokuapp.com/courses`)
     let data=await res.json()
    
   
@@ -101,13 +101,13 @@ function showData(d) {
 };
 
 function courseDetailsPage() {
-  window.location.href = "http://localhost:2355/courseDetail";
+  window.location.href = " https://murmuring-brook-47360.herokuapp.com/courseDetail";
 }
 
 
  async function addlang(e) {
 
-  let res =await  fetch(`http://localhost:2355/courses`)
+  let res =await  fetch(` https://murmuring-brook-47360.herokuapp.com/courses`)
     let data=await res.json()
  
   if (e.key == "Enter") {
@@ -126,7 +126,7 @@ function courseDetailsPage() {
 };
 async function adddur(e) {
   
-  let res =await  fetch(`http://localhost:2355/courses`)
+  let res =await  fetch(` https://murmuring-brook-47360.herokuapp.com/courses`)
   let data=await res.json()
 
   if (e.key == "Enter") {
@@ -155,9 +155,9 @@ function showProfile() {
 }
   
 function logout() {
-    window.location.href = "http://localhost:2355/logout";
+    window.location.href = " https://murmuring-brook-47360.herokuapp.com/logout";
 }
 
 function myPurchase() {
-      window.location.href = "http://localhost:2355/myPurchase";
+      window.location.href = " https://murmuring-brook-47360.herokuapp.com/myPurchase";
 }

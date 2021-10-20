@@ -47,7 +47,7 @@
         userAllData = JSON.stringify(userAllData);
        
         
-            fetch("http://localhost:2355/users/signup", {
+            fetch(" https://murmuring-brook-47360.herokuapp.com/users/signup", {
                 method: "Post",
                 body: userAllData,
 
@@ -93,7 +93,7 @@
                 document.getElementById("validateBox2").style.display = "block";
             }
             else {
-                fetch(`http://localhost:2355/users/logindata/${username}`, {
+                fetch(` https://murmuring-brook-47360.herokuapp.com/users/logindata/${username}`, {
                     method: "Get",
                 
                 })
@@ -114,7 +114,7 @@
                     document.querySelector(".bg-model_login").style.display = "none";
                     document.body.style.background = "none";
                     const name = data.name;
-                    window.location.href = `http://localhost:2355/afterLogin?name=${name}`;
+                    window.location.href = ` https://murmuring-brook-47360.herokuapp.com/afterLogin?name=${name}`;
                     return;
                 }
         

@@ -58,7 +58,7 @@
       </form>
       <button id="search_button" onclick="SearchButton()">
         <a
-          href="http://localhost:2355/allcourse?name=<%= name %>"
+          href=" https://murmuring-brook-47360.herokuapp.com/allcourse?name=<%= name %>"
           style="width: 0; height: 0"
         >
           <img
@@ -806,7 +806,7 @@
     let query = document.getElementById("search_box").value;
     console.log(query);
 
-    fetch(`http://localhost:2355/courses/name?search=${query}`, {
+    fetch(` https://murmuring-brook-47360.herokuapp.com/name?search=${query}`, {
       method: "Get",
     })
       .then((res) => {
@@ -853,12 +853,12 @@
     });
 
     function logout() {
-      window.location.href = "http://localhost:2355/logout";
+      window.location.href = " https://murmuring-brook-47360.herokuapp.com/logout";
     }
 
     function myPurchase() {
       console.log("check");
-      window.location.href = "http://localhost:2355/myPurchase";
+      window.location.href = " https://murmuring-brook-47360.herokuapp.com/myPurchase";
     }
 
     document.getElementById("myPurchase").addEventListener("click", myPurchase);
