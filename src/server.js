@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-
+require("dotenv").config();
 const mongoose = require("mongoose");
 const cors = require("cors");
 
@@ -92,7 +92,7 @@ app.use("/courses",courseController)
 
 app.use("/users", signupcontroller);
 
-app.listen(2355, async () => {
+app.listen(process.env.PORT || 2355, async () => {
     await connect();
     console.log("listening to port 2355");
 });
